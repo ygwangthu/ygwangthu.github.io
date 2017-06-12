@@ -1,15 +1,10 @@
 @import url("font-awesome.css");
 
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
 body {
 	background-image: url("images/overlay.png"), url("images/bg.jpg");
 	background-repeat: repeat, no-repeat;
 	background-size: auto, 100% 100%;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: sans-serif;
     color:#222222;
 }
 
@@ -98,6 +93,10 @@ section, article {
 #main a:hover { text-decoration:underline;color: red}
 #main a:visited { text-decoration: none;color:red}
 
+#publication a:link{text-decoration: none;color: blue}
+#publication a:hover{text-decoration: underline;color: blue}
+#publication a:visited{text-decoration: none;color: blue}
+
 /* Footer */
 #footer {
 	color: rgba(255, 255, 255, 0.45);
@@ -136,9 +135,8 @@ section, article {
 	}
 
     .panel {
-        padding: 0.5em 1.6em;
+        padding: 0.5em 1em;
         position: relative;
-        width: 42em;
 	}
 
 	/* Wrapper */
@@ -237,15 +235,6 @@ section, article {
 		width: 45em;
 		background: #ffffff;
 		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
-	}
-	
-	#publication td{
-		height: 7em
-	}
-	#publication .paper {
-		font-size: 0.8em;
-		position: relative;
-		line-height: 1.5em;
 	}
 
 	#footer {
