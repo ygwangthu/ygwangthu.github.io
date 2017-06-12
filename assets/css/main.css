@@ -8,38 +8,12 @@ body {
     color:#222222;
 }
 
-page_header {
-    font-family: 'Times New Roman', 'Microsoft YaHei';
-    font-size: 1.5em;
-    font-weight: bold;
-    display: inline-block;
-    line-height: 1.75em;
-    color: #000000;
-}
-
 header {
     font-family: 'Times New Roman', 'Microsoft YaHei';
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
     display: inline-block;
-    line-height: 150%;
     color: #000000;
-}
-p {
-    font-size: 0.8em;
-    text-indent: 2em
-}
-paper_header {
-	font-size: 1.1em;
-}
-
-me_p {
-    font-size: 0.8em;
-}
-
-.my-background-table {
-	font-size: 0.8em;
-	margin:0 0 0 2em;
 }
 
 section, article {
@@ -137,6 +111,7 @@ section, article {
     .panel {
         padding: 0.5em 1em;
         position: relative;
+        border-radius: 25px;
 	}
 
 	/* Wrapper */
