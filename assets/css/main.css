@@ -24,7 +24,6 @@ section, article {
 		margin-bottom: 0;
 	}
 
-/* Icons */
 .icon {
 	position: relative;
 	text-decoration: none;
@@ -43,7 +42,6 @@ section, article {
 	display: none;
 }
 
-/* Nav */
 #nav a {
 	position: relative;
 	display: inline-block;
@@ -57,7 +55,6 @@ section, article {
 	padding-right: 0;
 }
 
-/* Panels */
 #main {
     position: relative;
     overflow: hidden;
@@ -93,8 +90,6 @@ section, article {
 
 /* Desktop */
 @media screen and (min-width: 737px) {
-
-	/* Basic */
 	html {
 		min-width: 100%;
 		min-height: 100%;
@@ -114,14 +109,12 @@ section, article {
         border-radius: 25px;
 	}
 
-	/* Wrapper */
 	#wrapper {
 		width: 45em;
 		margin: 0 auto;
 		opacity: 0.00001;
 	}
 
-	/* Nav */
 	#nav {
 		text-align: center;
 		height: 4.05em;
@@ -217,4 +210,67 @@ section, article {
 		padding: 2em 0 0 0;
 		font-size: 0.75em;
 	}
+}
+
+/* Mobile */
+@media screen and (max-width: 736px) {
+
+	body {
+		font-size: 11pt;
+		line-height: 1.75em;
+	}
+
+	#wrapper {
+		padding: 7px;
+	}
+
+	#nav {
+		text-align: center;
+		margin: 6px 0 8px 0;
+	}
+
+		#nav a {
+			font-size: 2em;
+			opacity: 0.5;
+			outline: 0;
+			width: 1.5em;
+			height: 1.5em;
+			line-height: 1.35em;
+			margin: 0 0.25em 0 0.25em;
+		}
+
+			#nav a:active {
+				opacity: 1.0;
+			}
+
+			#nav a span {
+				display: none;
+			}
+
+	#main {
+		background: none;
+		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
+	}
+
+	.panel {
+		padding: 15px 15px 15px 15px;
+		margin: 0 0 7px 0;
+		background: #ffffff;
+		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
+        border-radius: 25px;
+	}
+
+	#footer {
+		text-align: center;
+		padding: 2em 0 0 0;
+		font-size: 0.85em;
+	}
+
+		#footer .copyright li {
+			display: block;
+		}
+
+			#footer .copyright li:before {
+				display: none;
+			}
 }
