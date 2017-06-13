@@ -61,12 +61,8 @@ section, article {
     display: inline-block;
 }
 #main a:link {text-decoration: none;color: blue}        
-#main a:hover { text-decoration:underline;color: red}
-#main a:visited { text-decoration: none;color:red}
-
-#publication a:link{text-decoration: none;color: blue}
-#publication a:hover{text-decoration: underline;color: blue}
-#publication a:visited{text-decoration: none;color: blue}
+#main a:hover { text-decoration:underline;color: forestgreen}
+#main a:visited { text-decoration: none;color:forestgreen}
 
 /* Footer */
 #footer {
