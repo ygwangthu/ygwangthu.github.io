@@ -115,6 +115,7 @@ section, article {
 		text-align: center;
 		height: 4.05em;
 		cursor: default;
+		margin: 1.5em 0 0 0;
 	}
 
 		#nav a {
@@ -221,7 +222,7 @@ section, article {
 
 	#nav {
 		text-align: center;
-		margin: 6px 0 8px 0;
+		margin: 1.5em 0 0 0;
 	}
 
 		#nav a {
