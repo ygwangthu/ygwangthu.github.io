@@ -10,10 +10,12 @@ body {
 
 header {
     font-family: Arial, Helvetica,'Microsoft YaHei', sans-serif;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-weight: bold;
     display: inline-block;
     color: #000000;
+	margin-bottom: 0em;
+	padding-bottom: 0em;
 }
 
 section, article {
