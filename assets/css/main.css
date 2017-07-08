@@ -161,9 +161,9 @@ section, article {
 				height: 2em;
 				line-height: 2em;
 				left: 50%;
-				opacity: 0.0001;
+				opacity: 0.00001;
 				-moz-transition: opacity .25s ease-in-out;
-				-webkit-transition: opacity .25s ease-in-3out;
+				-webkit-transition: opacity .25s ease-in-out;
 				-ms-transition: opacity .25s ease-in-out;
 				transition: opacity .25s ease-in-out;
 				width: 7em;
