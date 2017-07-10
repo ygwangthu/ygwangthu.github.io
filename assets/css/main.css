@@ -62,9 +62,9 @@ section, article {
     overflow: hidden;
     display: inline-block;
 }
-#main a:link {text-decoration: none;color: blue}        
-#main a:hover { text-decoration:underline;color: forestgreen}
-#main a:visited { text-decoration: none;color:forestgreen}
+#main a:link {text-decoration: none}        
+#main a:hover { text-decoration:underline}
+#main a:visited { text-decoration: none}
 
 /* Footer */
 #footer {
