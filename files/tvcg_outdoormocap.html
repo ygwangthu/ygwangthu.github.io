@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Outdoor Markerless Motion Capture with Sparse Handheld Video Cameras</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="../images/logo.ico" type="../image/x-icon" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="main" class="panel shadow" style="margin-top:2em">
+            <article id="news" class="panel">
+                <!-- head -->
+                <div style="font-size:0.75em;text-align:center;padding-top:0.5em">IEEE Transactions on Visualization and Computer Graphics (TVCG 2017)</div>
+                <div style="font-size:1.0em;font-weight:bold;padding:1em 6em;text-align:center">Outdoor Markerless Motion Capture with Sparse Handheld Video Cameras</div>
+                <div style="font-size:0.75em;padding-bottom:1em;text-align:center">
+                    <div style="display:inline-block;width:8em;"><a target="_blank" href="http://yangangwang.com/" style="color:#dc403b;">Yangang Wang</a><sup>1</sup>, </div>
+                    <div style="display:inline-block;width:6em;"><a target="_blank" href="http://www.liuyebin.com/" style="color:#dc403b;">Yebin Liu</a><sup>2</sup>, </div>
+                    <div style="display:inline-block;width:5.5em;"><a target="_blank" href="https://www.microsoft.com/en-us/research/people/xtong/" style="color:#dc403b;">Xin Tong</a><sup>1</sup>, </div>
+                    <div style="display:inline-block;width:8em;"><a target="_blank" href="http://media.au.tsinghua.edu.cn/qhdai.html" style="color:#dc403b;">Qionghai Dai</a><sup>2</sup>, </div>
+                    <div style="display:inline-block;width:5em;"><a target="_blank" href="http://www.cs.sfu.ca/~pingtan/" style="color:#dc403b;">Ping Tan</a><sup>3</sup></div>
+                </div>
+                <div style="font-size:0.75em;padding-bottom:1em;text-align:center">
+                    <div style="display:inline-block;width:11em"><sup>1</sup><a target="_blank" href="http://research.microsoft.com/" style="color:#00a03e;">Microsoft Research</a></div>
+                    <div style="display:inline-block;width:12em"><sup>2</sup><a target="_blank" href="http://www.tsinghua.edu.cn/publish/newthuen/index.html" style="color:#00a03e;">Tsinghua University</a></div>
+                    <div style="display:inline-block;width:12em"><sup>3</sup><a target="_blank" href="https://www.sfu.ca/" style="color:#00a03e;">Simon Fraser University</a></div>
+                </div>
+                <hr />
+
+                <!-- teaser -->
+                <div style="text-align:center"><img width="95%" src="../images/outdoormocap-tvcg-teaser.png"></div>
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em"><div style="font-weight:bold;display:inline-block">System pipeline.</div> (a) Our system takes multiple synchronized videos captured by handheld cameras as input. (b) We adopt the <a target="_blank" href="http://ieeexplore.ieee.org/document/6193110/" style="color:#00a03e;font-weight:bold">CoSLAM</a> method to calibrate all cameras in 3D space. (c) Our motion tracking system estimates the skeleton motion with a sample-based method. (d) We use a gradient-based method to refine the skeleton pose.</div>               
+
+                 <!-- abstract -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em;">Abstract</div>   
+                <hr />       
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em">We present a method for outdoor markerless motion capture with sparse handheld video cameras. In the simplest setting, it only involves two mobile phone cameras following the character. This setup can maximize the flexibilities of data capture and broaden the applications of motion capture. To solve the character pose under such challenge settings, we exploit the generative motion capture methods and propose a novel model-view consistency that considers both foreground and background in the tracking stage. The background is modeled as a deformable 2D grid, which allows us to compute the background-view consistency for sparse moving cameras. The 3D character pose is tracked with a global-local optimization through minimizing our consistency cost. A novel L1 motion regularizer is also proposed in the optimization to constrain the solution pose space. The whole process of the proposed method is simple as frame by frame video segmentation is not required. Our method outperforms several alternative methods on various examples demonstrated in the paper.</div>
+
+                <!-- results -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Results</div>
+                <hr />
+                <div style="text-align:center"><img width="95%" src="../images/outdoormocap-tvcg-result.png"></div>
+
+                <!-- materials -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Materials</div>
+                <hr />
+                <table style="font-size:0.75em;font-weight:bold">
+                    <tr>
+                        <td style="width:30%;padding:0em 0.5em"><a href="../files/Outdoor Markerless Motion Capture with Sparse Handheld Video Cameras.pdf"><img width="95%" src="../images/outdoormocap-tvcg-paper.png"></a></td>
+                        <td style="width:70%;padding:0em 0.5em">
+                            <div class="video-container">
+                                <iframe width="1280" height="720" src="https://www.youtube.com/embed/Fa_y9rxMPPg" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- acknowledgements -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Acknowledgments</div>
+                <hr />
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em">We would like thank <a target="_blank" href="http://www.linkaimo.org/" style="color:#00a03e;">Kaimo Lin</a> to help us to capture the majority of data. This work was supported in part by the National Key Foundation for Exploring Scientific Instrument No.2013YQ140517, the National Science Foundation of China (NSFC) No.61522111 and No.61531014.</div>
+
+                <!-- bibtex -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Bibtex</div>
+                <hr />
+                <div style="font-size:0.65em;padding-bottom:2em;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">@article{wang2017outdoormocap,<br>
+                    &nbsp &nbsp &nbsp &nbsp author = {Wang, Yangangang and Liu, Yebin and Tong, Xin and Dai, Qionghai and Tan, Ping},<br>
+                    &nbsp &nbsp &nbsp &nbsp title = {Outdoor Markerless Motion Capture with Sparse Handheld Video Cameras},<br>
+                    &nbsp &nbsp &nbsp &nbsp journal = {IEEE transactions on visualization and computer graphics},<br>
+                    &nbsp &nbsp &nbsp &nbsp year = {2017},<br>
+                    &nbsp &nbsp &nbsp &nbsp publisher = {IEEE}<br>
+                    }
+                </div>
+            </article>
+        </div>
+
+        <!-- Footer -->
+		<div id="footer">
+			<ul class="copyright">
+				<li>&copy; 2017 Dr. Yangang Wang. All Rights Reserved.</li>
+			</ul>
+		</div>
+    </div>
+
+    <!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/skel.min.js"></script>
+	<script src="../assets/js/skel-viewport.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="../assets/js/main.js"></script>
+</body>
+</html>
