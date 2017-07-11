@@ -106,14 +106,13 @@ section, article {
 
 /* Desktop */
 @media screen and (min-width: 737px) {
-	html {
-		min-width: 100%;
-		min-height: 100%;
-	}
+    html{
+        width: auto;
+        height: auto;
+    }
 
 	body {
-		width: 100%;
-		min-height: 100%;
+        width: auto;
 		overflow-y: scroll;
 		background-attachment: fixed;
 	}
