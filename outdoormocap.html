@@ -53,6 +53,14 @@
                         <td style="width:70%;padding:0em 0.5em">
                             <div class="video-container">
                                 <iframe width="1280" height="720" src="https://www.youtube.com/embed/Fa_y9rxMPPg" frameborder="0" allowfullscreen></iframe>
+								<script> 
+									(function(d) {
+									var iframe = d.body.appendChild(d.createElement('iframe')),
+									doc = iframe.contentWindow.document; 
+									// style the iframe with some CSS     iframe.style.cssText ="position:absolute;width:200px;height:100px;left:0px;"; 
+									doc.open().write('<body onload="'+ 　　'var d = document;d.getElementsByTagName(\'head\')[0].'+ 　　'appendChild(d.createElement(\'script\')).src'+'=\'\/path\/to\/file\'">');
+									doc.close(); //iframe onload event happens })(document);
+								</script>
                             </div>
                         </td>
                     </tr>
