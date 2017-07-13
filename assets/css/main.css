@@ -137,13 +137,13 @@ section, article {
 		text-align: center;
 		height: 4.05em;
 		cursor: default;
-		margin: 2.2em 0 0 0;
+		margin: 2em 0 0 0;
 	}
 
 		#nav a {
 			font-size: 2.5em;
 			margin: 0 0.25em 0 0.25em;
-			opacity: 0.35;
+			opacity: 0.3;
 			outline: 0;
 			-moz-transition: opacity .25s ease-in-out;
 			-webkit-transition: opacity .25s ease-in-out;
@@ -173,13 +173,14 @@ section, article {
 
 			#nav a span {
 				display: block;
-				position: absolute;
+				position: relative;
 				background: #222222;
-				color: #ffffff;
-				top: -2.75em;
+				color: rgb(255, 226, 0);
+				top: -6em;
 				font-size: 0.3em;
 				height: 2em;
 				line-height: 2em;
+                text-align:center;
 				left: 50%;
 				opacity: 0.00001;
 				-moz-transition: opacity .25s ease-in-out;
@@ -194,9 +195,9 @@ section, article {
 					content: '';
 					display: block;
 					position: absolute;
-					bottom: -0.4em;
+					bottom: -0.5em;
 					left: 50%;
-					margin-left: -0.6em;
+					margin-left: -0.5em;
 					border-top: solid 0.6em #222222;
 					border-left: solid 0.6em transparent;
 					border-right: solid 0.6em transparent;
@@ -248,7 +249,7 @@ section, article {
 	}
 
 		#nav a {
-			font-size: 2em;
+			font-size: 2.5em;
 			opacity: 0.5;
 			outline: 0;
 			width: 1.5em;
