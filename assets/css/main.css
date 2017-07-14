@@ -66,9 +66,9 @@ section, article {
   margin-right: 14px;
   display: block;
   float: left;
-  box-shadow: 3px 3px 1px #ccc;
-  -webkit-box-shadow: 3px 3px 1px #ccc;
-  -moz-box-shadow: 3px 3px 1px #ccc;
+  box-shadow: 0px 0px 10px 3px #ccc;
+  -webkit-box-shadow: 0px 0px 10px 3px #ccc;
+  -moz-box-shadow: 0px 0px 10px 3px #ccc;
 }
 
 #nav a {
@@ -150,7 +150,7 @@ section, article {
 	}
 
 		#nav a {
-			font-size: 2.5em;
+			font-size: 2.2em;
 			margin: 0 0.25em 0 0.25em;
 			opacity: 0.3;
 			outline: 0;
@@ -169,7 +169,7 @@ section, article {
 				display: block;
 				position: absolute;
 				left: 50%;
-				bottom: -0.7em;
+				bottom: -0.9em;
 				margin-left: -0.5em;
 				border-bottom: solid 0em #ffffff;
 				border-left: solid 0.5em transparent;
@@ -190,6 +190,7 @@ section, article {
 				height: 2em;
 				line-height: 2em;
                 text-align:center;
+                border-radius: 8px;
 				left: 50%;
 				opacity: 0.00001;
 				-moz-transition: opacity .25s ease-in-out;
