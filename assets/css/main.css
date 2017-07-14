@@ -62,15 +62,6 @@ section, article {
  height: 100%;
 }
 
-.image_carousel img {
-  margin-right: 14px;
-  display: block;
-  float: left;
-  box-shadow: 0px 0px 10px 3px #ccc;
-  -webkit-box-shadow: 0px 0px 10px 3px #ccc;
-  -moz-box-shadow: 0px 0px 10px 3px #ccc;
-}
-
 #nav a {
 	position: relative;
 	display: inline-block;
@@ -135,6 +126,12 @@ section, article {
         position: relative;
         box-shadow: 0px 15px 20px -15px rgba(0,0,0,0.7);
     }
+	
+	.image_carousel img {
+		box-shadow: 0px 0px 10px 3px #ccc;
+		-webkit-box-shadow: 0px 0px 10px 3px #ccc;
+		-moz-box-shadow: 0px 0px 10px 3px #ccc;
+	}
 
 	#wrapper {
 		width: 43em;
@@ -284,6 +281,12 @@ section, article {
 		padding: 0.5em 1em;
         background: #ffffff;
         border-radius: 25px;
+	}
+	
+	.image_carousel img {
+		box-shadow: 0px 0px 5px 1px #ccc;
+		-webkit-box-shadow: 0px 0px 5px 1px #ccc;
+		-moz-box-shadow: 0px 0px 5px 1px #ccc;
 	}
 
 	#footer {
