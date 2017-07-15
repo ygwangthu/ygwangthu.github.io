@@ -81,8 +81,8 @@ section, article {
     overflow: hidden;
     display: inline-block;
 }
-#main a{color:#2B98DC;text-decoration:none}
-#main a:hover,a:focus{color:#0066AA;text-decoration:underline;}
+#main a{color:#286BE1;text-decoration:none}
+#main a:hover,a:focus{color:#0043B9;text-decoration:underline;}
 #main a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
 
 /* Footer */
