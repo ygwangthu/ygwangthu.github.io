@@ -69,6 +69,7 @@ section, article {
 	width: 1em;
 	height: 1em;
 	line-height: 0.9em;
+	text-decoration:none;
 }
 
 #nav a.icon:before {
@@ -80,9 +81,9 @@ section, article {
     overflow: hidden;
     display: inline-block;
 }
-#main a:link {text-decoration: none}        
-#main a:hover { text-decoration:underline}
-#main a:visited { text-decoration: none}
+#main a{color:#428bca;text-decoration:none}
+#main a:hover,a:focus{color:#2a6496;text-decoration:underline;}
+#main a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
 
 /* Footer */
 #footer {
