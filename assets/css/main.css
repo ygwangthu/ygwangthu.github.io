@@ -121,7 +121,7 @@ section, article {
     .panel {
         padding: 0.5em 1em;
         position: relative;
-        border-radius: 25px;
+        border-radius: 10px;
 	}
     .shadow {
         position: relative;
@@ -188,7 +188,7 @@ section, article {
 				height: 2em;
 				line-height: 2em;
                 text-align:center;
-                border-radius: 8px;
+                border-radius: 5px;
 				left: 50%;
 				opacity: 0.00001;
 				-moz-transition: opacity .25s ease-in-out;
@@ -281,7 +281,7 @@ section, article {
 	.panel {
 		padding: 0.5em 1em;
         background: #ffffff;
-        border-radius: 25px;
+        border-radius: 10px;
 	}
 	
 	.image_carousel img {
