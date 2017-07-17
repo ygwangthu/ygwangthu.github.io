@@ -136,7 +136,7 @@ section, article {
     .image_tsinghua_logo {
         display:inline-block;
         position:absolute;
-        left:82%;
+        left:81%;
         width:8%
     }
     .image_seu_logo {
@@ -148,9 +148,9 @@ section, article {
     .image_msra_logo {
         display:inline-block;
         position:absolute;
-        left:83%;
+        left:82%;
         top:4.3em;
-        width:15%
+        width:16%
     }
 
 	#wrapper {
