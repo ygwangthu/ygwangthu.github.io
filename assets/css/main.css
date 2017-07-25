@@ -62,6 +62,19 @@ section, article {
  height: 100%;
 }
 
+/* Email */
+.hide { display: none; }
+.mock { }
+.unselectable { /* http://stackoverflow.com/questions/2310734/how-to-make-html-text-unselectable */
+ 	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
 #nav a {
 	position: relative;
 	display: inline-block;
