@@ -1,4 +1,5 @@
 @import url("font-awesome.css");
+@font-face { font-family: "Titillium Web"; src: url('../fonts/TitilliumWeb-SemiBold.ttf'); }
 
 body {
 	background-image: url("images/overlay.png"), url("images/bg.jpg");
