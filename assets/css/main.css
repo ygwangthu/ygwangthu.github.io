@@ -1,4 +1,5 @@
 @import url("font-awesome.css");
+@import url(http://fonts.font.im/css?family=Fira+Sans);
 
 body {
 	background-image: url("images/overlay.png"), url("images/bg.jpg");
