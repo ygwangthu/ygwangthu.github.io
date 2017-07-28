@@ -1,5 +1,6 @@
 @import url("font-awesome.css");
 @font-face { font-family: "Titillium Web"; src: url('../fonts/TitilliumWeb-SemiBold.ttf'); }
+@font-face { font-family: "Noto Serif"; src: url('../fonts/NotoSerifSC-Bold.otf'); }
 
 body {
 	background-image: url("images/overlay.png"), url("images/bg.jpg");
