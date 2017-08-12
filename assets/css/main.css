@@ -1,5 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Bitter:700|Exo+2:600');
+ /*@import url('https://fonts.googleapis.com/css?family=Bitter:700|Exo+2:600');*/
 @import url('font-awesome.css');
+
+@font-face {
+	font-family: 'Bitter';
+	src: url('../fonts/Bitter-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Exo 2';
+	src: url('../fonts/Exo2-SemiBold.ttf') format('truetype');
+}
 
 body {
 	background-image: url("images/overlay.png"), url("images/bg.jpg");
