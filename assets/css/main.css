@@ -288,6 +288,7 @@ section, article {
 	body {
 		font-size: 11pt;
 		line-height: 1.75em;
+		background-attachment: fixed;
 	}
 
 	#wrapper {
@@ -319,12 +320,14 @@ section, article {
 
 	#main {
 		background: none;
+		width: auto;
 	}
 
 	.panel {
 		padding: 0.5em 1em;
         background: #ffffff;
         border-radius: 10px;
+		width: auto;
 	}
 	
 	.image_carousel img {
