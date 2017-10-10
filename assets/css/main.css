@@ -103,7 +103,7 @@ section, article {
 #main {
     position: relative;
     overflow: hidden;
-    display: inline-block;
+    /*display: inline-block;*/
 }
 #main a{color:#488AC7;text-decoration:none}
 #main a:hover,a:focus{color:#165895;text-decoration:underline;}
@@ -293,6 +293,7 @@ section, article {
 
 	#wrapper {
 		padding: 7px;
+		width: auto;
 	}
 
 	#nav {
@@ -301,7 +302,7 @@ section, article {
 	}
 
 		#nav a {
-			font-size: 1.5em;
+			font-size: 1.7em;
 			opacity: 0.5;
 			outline: 0;
 			width: 1.5em;
@@ -327,7 +328,6 @@ section, article {
 		padding: 0.5em 1em;
         background: #ffffff;
         border-radius: 10px;
-		width: auto;
 	}
 	
 	.image_carousel img {
