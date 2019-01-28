@@ -41,6 +41,19 @@
                 <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
                 <div style="text-align:left;font-size:0.75em;line-height:1.4em">We present a cascaded convolutional neural network for 2D hand pose estimation from single in-the-wild RGB images. Inspired by the commonly used silhouette information in the generative pose estimation approaches, we build the cascaded network with two stages, including mask prediction stage as well as pose estimation stage. We find that the two stages network architecture for end-to-end training could benefit with each other for detecting the hand mask and 2D pose. To further improve the hand pose detection accuracy, we contribute a new RGB hand dataset named <span style="font-weight:bold">OneHand10K</span>, which contains 10K RGB images. Each image contains one single hand. We manually obtained the segmented mask and labeled keypoints for guided learning. We hope that this dataset will give a benchmark and encourage more people to perform research on this challenging topic. Experiments on the validation dataset have demonstrated the superior performance of the proposed cascaded convolutional neural network.</div>
 
+                <!-- Code -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Training Code</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em;">
+                    Our network was originally trained by <a href="http://caffe.berkeleyvision.org/">Caffe</a>. The training codes are listed below:
+                    <p>
+                        <span style="font-size:0.9em;"><a target="_blank" href="WANG-MCC-2018-10-code/train_val_total.prototxt">Training Network <i class="fa fa-arrow-right"></i></a></span>&nbsp&nbsp&nbsp&nbsp
+                        <span style="font-size:0.9em;"><a target="_blank" href="WANG-MCC-2018-10-code/solver_total.prototxt">Solver <i class="fa fa-arrow-right"></i></a></span>&nbsp&nbsp&nbsp&nbsp
+                        <span style="font-size:0.9em;"><a target="_blank" href="WANG-MCC-2018-10-code/pose_deploy_total.prototxt">Deploy Network <i class="fa fa-arrow-right"></i></a></span>
+                    </p>
+                    <span style="font-weight:bold">Note that we have updated our training platform to <a href="https://github.com/pytorch/pytorch/tree/master/caffe2">Caffe2</a>, the original trained weights are not maintained anymore. You can re-train the network and reproduce the results of this paper by yourself</span>.
+                </div>
+
                 <!-- Dataset -->
                 <div style="font-size:0.9em;font-weight:bold;padding-top:2em">OneHand10K Dataset</div>
                 <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
