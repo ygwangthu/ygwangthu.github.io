@@ -6,6 +6,7 @@
 //  - the code needs the Pytorch model in our webpage
 //  - the code works for the real-time camera input
 //  - the code is only tested under Release MODE
+//  - you may disable SDL check if you use Visual Studio to compile the code
 //
 // For more information, please visite our webpage from https://www.yangangwang.com/papers/WANG-SRH-2019-07.html
 //
@@ -121,14 +122,14 @@ float transformNetInput(Tensor& inputTensor, const Mat& src_img, int tensor_inde
 
 	size_t total_bytes = sizeof(float) * inputTensor.size(2) * inputTensor.size(3);
 	if (chn_img.size() == 1) {
-		memcpy(inputTensor[tensor_index][0].data<float>(), (float*)chn_img[0].data, total_bytes);
-		memcpy(inputTensor[tensor_index][1].data<float>(), (float*)chn_img[0].data, total_bytes);
-		memcpy(inputTensor[tensor_index][2].data<float>(), (float*)chn_img[0].data, total_bytes);
+		memcpy(inputTensor[tensor_index][0].data_ptr<float>(), (float*)chn_img[0].data, total_bytes);
+		memcpy(inputTensor[tensor_index][1].data_ptr<float>(), (float*)chn_img[0].data, total_bytes);
+		memcpy(inputTensor[tensor_index][2].data_ptr<float>(), (float*)chn_img[0].data, total_bytes);
 	}
 	else {
-		memcpy(inputTensor[tensor_index][0].data<float>(), (float*)chn_img[0].data, total_bytes);
-		memcpy(inputTensor[tensor_index][1].data<float>(), (float*)chn_img[1].data, total_bytes);
-		memcpy(inputTensor[tensor_index][2].data<float>(), (float*)chn_img[2].data, total_bytes);
+		memcpy(inputTensor[tensor_index][0].data_ptr<float>(), (float*)chn_img[0].data, total_bytes);
+		memcpy(inputTensor[tensor_index][1].data_ptr<float>(), (float*)chn_img[1].data, total_bytes);
+		memcpy(inputTensor[tensor_index][2].data_ptr<float>(), (float*)chn_img[2].data, total_bytes);
 	}
 	return ratio;
 }
@@ -150,7 +151,7 @@ void detectBbox(vector<Rect>& handrect, jit::script::Module& model, const Mat& i
 	int rect_map_idx = heatmap.size(1) - 3;
 	for (int i = 0; i < 3; i++) {
 		rectmap[i] = Mat::zeros(heatmap.size(2), heatmap.size(3), CV_32FC1);
-		auto ptr = heatmap[0][i + rect_map_idx].cpu().data<float>();
+		auto ptr = heatmap[0][i + rect_map_idx].cpu().data_ptr<float>();
 		memcpy((float*)rectmap[i].data, ptr, sizeof(float) * heatmap.size(2) * heatmap.size(3));
 	}
 	map<float, Point2f, greater<float>> locations;
@@ -206,7 +207,7 @@ void detecthand(vector<map<float, Point2f, greater<float>>>& manypoints,
 
 		for (int i = 0; i < net_result.size(1) - 3; i++) {
 			Mat heatmap = Mat::zeros(net_result.size(2), net_result.size(3), CV_32FC1);
-			memcpy((float*)heatmap.data, net_result[rectIdx][i].cpu().data<float>(), total_bytes);
+			memcpy((float*)heatmap.data, net_result[rectIdx][i].cpu().data_ptr<float>(), total_bytes);
 			map<float, Point2f, greater<float>> points;
 			nmslocation(heatmap, points, LABEL_MIN);
 
