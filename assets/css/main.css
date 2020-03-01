@@ -1,14 +1,3 @@
- /*@import url('https://fonts.googleapis.com/css?family=Bitter:700|Exo+2:600');*/
-@font-face {
-	font-family: 'Bitter';
-	src: url('../fonts/Bitter-Bold.ttf') format('truetype');
-}
-@font-face {
-	font-family: 'Exo 2';
-	src: url('fonts/webfont.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Exo2-SemiBold.ttf') format('truetype');
-}
-
 body {
 	background-color: #626167;
 	font-family: Arial, Helvetica,'Microsoft YaHei', sans-serif;
