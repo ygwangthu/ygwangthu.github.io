@@ -1,5 +1,5 @@
  /*@import url('https://fonts.googleapis.com/css?family=Bitter:700|Exo+2:600');*/
-@import url('font-awesome.css');
+@import url('font-awesome.min.css');
 
 @font-face {
 	font-family: 'Bitter';
@@ -12,9 +12,7 @@
 }
 
 body {
-	background-image: url("images/overlay.png"), url("images/bg.jpg");
-	background-repeat: repeat, no-repeat;
-	background-size: auto, 100% 100%;
+	background-color: #626167;
 	font-family: Arial, Helvetica,'Microsoft YaHei', sans-serif;
     color:#222;
 }
@@ -29,14 +27,9 @@ header {
 	padding-bottom: 0em;
 }
 
-section, article {
-	margin-bottom: 3em;
+article{
+	margin-bottom: 1em;
 }
-
-	section > :last-child, section:last-child, article > :last-child, article:last-child {
-		margin-bottom: 0;
-	}
-
 
 .icon {
 	position: relative;
@@ -103,7 +96,6 @@ section, article {
 #main {
     position: relative;
     overflow: hidden;
-    /*display: inline-block;*/
 }
 #main a{color:#488AC7;text-decoration:none}
 #main a:hover,a:focus{color:#165895;text-decoration:underline;}
@@ -292,7 +284,7 @@ section, article {
 	}
 
 	#wrapper {
-		padding: 7px;
+		padding: 0.5em;
 		width: auto;
 	}
 
@@ -326,7 +318,7 @@ section, article {
 
 	.panel {
 		padding: 0.5em 1em;
-        background: #ffffff;
+		background: #ffffff;
         border-radius: 10px;
 	}
 	

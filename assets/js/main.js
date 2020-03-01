@@ -21,7 +21,8 @@
 
 	var $window = $(window);
 
-	$window.on('load', function() {
+	$(document).ready(function(){
+	//$window.on('load', function() {
 
 		skel
 			.breakpoints({
@@ -46,7 +47,6 @@
 					$wrapper = $('#wrapper'),
 					$nav = $('#nav'), $nav_links = $nav.find('a'),
 					$jumplinks = $('.jumplink'),
-					$form = $('form'),
 					panels = [],
 					activePanelId = null,
 					firstPanelId = null,
@@ -198,17 +198,6 @@
 							.on('resize', function() {
 								$wrapper.css('min-height', $window.height());
 							});
-
-				// Fix: Placeholder polyfill.
-					$('form').placeholder();
-
-				// Prioritize "important" elements on mobile.
-					skel.on('+mobile -mobile', function() {
-						$.prioritize(
-							'.important\\28 mobile\\29',
-							skel.breakpoint('mobile').active
-						);
-					});
 
 				// CSS polyfills (IE<9).
 					if (skel.vars.IEVersion < 9)
