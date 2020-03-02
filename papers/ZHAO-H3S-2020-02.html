@@ -1,0 +1,249 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Hand-3D-Studio:A New Multi-View System For 3D Hand Reconstruction</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <link rel="icon" href="../images/logo.ico" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+
+    <!-- Scripts -->
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.lazy/1.7.10/jquery.lazy.min.js"></script>
+    <script src="https://cdn.bootcss.com/skel/3.0.1/skel.min.js"></script>
+    <script src="https://cdn.bootcss.com/skel/3.0.1/skel-viewport.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="main" class="panel shadow" style="margin-top:2em;line-height:1.3em">
+            <article id="news" class="panel">
+                <!-- head -->
+                <div style="font-size:0.75em;text-align:center;padding-top:0.5em">International
+                    Conference on Acoustics, Speech and Signal Processing (ICASSP), 2020</div>
+                <div style="font-size:1.0em;font-weight:bold;padding:1em 0.5em;text-align:center">Hand-3D-Studio:A New
+                    Multi-View System For 3D Hand Reconstruction</div>
+                <div style="font-size:0.75em;padding-bottom:0.5em;text-align:center">
+                    <div style="display:inline-block;width:7em;">Zhengyi Zhao, </div>
+                    <div style="display:inline-block;width:7.5em;">Tianyao Wang, </div>
+                    <div style="display:inline-block;width:4.5em;">Siyu Xia, </div>
+                    <div style="display:inline-block;width:8em;"><a target="_blank" href="http://yangangwang.com/"
+                            style="color:#EB7500">Yangang Wang</a></div>
+                </div>
+                <div style="font-size:0.75em;padding-bottom:0.1em;text-align:center">
+                    <div style="display:inline-block;width:12em"><a target="_blank"
+                            href="http://www.seu.edu.cn/english/main.htm" style="font-weight:bold">Southeast
+                            University</a></div>
+                </div>
+
+                <!-- System -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Hardware System</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em" />
+                <div>
+                    <table>
+                        <tr>
+                            <td><img class="lazy" width="200" data-src="ZHAO-H3S-2020-02-s1.jpg"></td>
+                            <td><img class="lazy" width="200" data-src="ZHAO-H3S-2020-02-s2.jpg"></td>
+                            <td><img class="lazy" width="200" data-src="ZHAO-H3S-2020-02-s3.jpg"></td>
+                            <td><img class="lazy" width="200" data-src="ZHAO-H3S-2020-02-s4.jpg"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em;">
+                    <ul>
+                        <li>
+                            <span style="font-weight:bold">Resolution: </span>15 DSLR cameras acquired high quality
+                            <u>multi-view 4K resolution</u> color images in a circular manner.
+                        </li>
+                        <li>
+                            <span style="font-weight:bold">Ergonomic design: </span> the height and angle of the
+                            customized holder can be adjusted depending on the height and shape human.
+                        </li>
+                        <li>
+                            <span style="font-weight:bold">Synchronization: </span>The synchronization delay is <u>less
+                                than 10 milliseconds</u>, far less than the USB software control scheme.
+                        </li>
+                        <li>
+                            <span style="font-weight:bold">Lighting: </span>A total length of 50 meters LED strips are
+                            mounted on the outsideofthe”yurt”to provide a <u>shadowless illumination</u> around the
+                            hand.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Dataset -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Multi-view 4K Dataset</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em" />
+
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em">
+                    We have collected multiview hand color images with 10 persons of different genders and skin colors.
+                    The gestures we collected are very representative and common in daily life. For each person, we
+                    collected 50 one-handed gestures and 27 hand-object interaction gestures, both for the left and
+                    right hand. The estures can be divided into 3 categories: ﬁnger-movements, common gestures and
+                    hand-object interaction gestures.
+                </div>
+
+                <table style="padding-left: 1em;margin:auto;padding-bottom: 1em;">
+                    <tr>
+                        <td style="width:50%;padding-right: 1em;">
+                            <table width="90%" style="font-family: Arial, Helvetica, sans-serif;
+                            font-size: 0.9em;
+                            font-weight: bold;
+                            border-bottom: 1px dashed #CCCCCC;
+                            color: #255e95;text-align: center;">
+                                <tr>
+                                    <td>Multi-view 4K Dataset</td>
+                                </tr>
+                            </table>
+
+                            <table width="90%" style="text-align: center;font-size: 0.75em;">
+                                <tbody>
+                                    <tr
+                                        style=" border:solid 1px #f2fbfe;font-family: Arial, Helvetica, sans-serif;background: #e9faff;color: #255e95;">
+                                        <td>Attributes</td>
+                                        <td>Value</td>
+                                    </tr>
+                                    <tr>
+                                        <td>num.subjects</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>num.objects</td>
+                                        <td>27</td>
+                                    </tr>
+                                    <tr>
+                                        <td>num.cameras</td>
+                                        <td>15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>num.frames</td>
+                                        <td>22K/-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>resolution</td>
+                                        <td>4K</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3D joints annotation</td>
+                                        <td>&#10004</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3D shape annotation</td>
+                                        <td>&#10004</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="width:50%;padding-top:2em;padding-left: 1em;">
+                            <img class="lazy" width="256" height="262" data-src="ZHAO-H3S-2020-02-dataset2.jpg">
+                        </td>
+                    </tr>
+                </table>
+
+                <div style="text-align:center;"><img class="lazy" width="820" height="451"
+                        data-src="ZHAO-H3S-2020-02-dataset1.jpg"></div>
+
+                <!-- Download -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Download</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em" />
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em;padding-bottom: 0.5em;">
+                    The dataset have a total size of 0GB. For your convenience, the dataset has been cut into 10 parts
+                    to download.
+                    <br><br>
+                    <table>
+                        <tr>
+                            <td>Please select:</td>
+                            <td>
+                                <div>
+                                    <select id="download">
+                                        <option value="1">Part1(0GB)</option>
+                                        <option value="2">Part2</option>
+                                        <option value="3">Part3</option>
+                                        <option value="4">Part4</option>
+                                        <option value="5">Part5</option>
+
+                                        <option value="6">Part6</option>
+                                        <option value="7">Part7</option>
+                                        <option value="8">Part8</option>
+                                        <option value="9">Part9</option>
+                                        <option value="10">Part10</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>and</td>
+                            <td>
+                                <div><button type="button" onclick="download()"><span
+                                            style="font-weight:bold;color:dodgerblue">Download</span></button></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <script>
+                    function download() {
+                        var n = Number(document.getElementById("download").value);
+                        switch (n) {
+                            case 1: window.open("test.zip");
+                                break;
+                            case 2: window.open("zzyICASSP-dataset1.png");
+                                break;
+                            case 3: window.open(" ");
+                                break;
+                            case 4: window.open(" ");
+                                break;
+                            case 5: window.open(" ");
+                                break;
+
+                            case 6: window.open(" ");
+                                break;
+                            case 7: window.open(" ");
+                                break;
+                            case 8: window.open(" ");
+                                break;
+                            case 9: window.open(" ");
+                                break;
+                            case 10: window.open(" ");
+                                break;
+                        }
+                    }
+                </script>
+                <noscript>Sorry! Your browser don't support JavaScript!</noscript>
+
+                <!-- Reference -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:1em">Reference</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em" />
+                <div style="background-color:#ddd;margin-bottom:1em">
+                    <div style="text-align:left;font-size:0.75em;line-height:1.4em;padding:1em 1em">Zhengyi Zhao, Tianyao Wang, Siyu Xia and Yangang Wang. "<strong>Hand-3D-Studio:A New
+                        Multi-View System For 3D Hand Reconstruction</strong>". <i>International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2020.</i></div>
+                </div>
+
+                <!-- acknowledgements -->
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em"><strong>Acknowledgments:</strong> This work was supported in part by the National Natural Science Foundation of China (No. 61806054), in part by the Natural Science Foundation
+                    of Jiangsu Province (No. BK20180355), in part by the Shenzhen Science and
+                    Technology Innovation Committee (STIC) (JCYJ20180306174459972) and
+                    “Zhishan Young Scholar” Program of Southeast University.</div>
+            </article>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            <ul class="copyright">
+                <li>&copy; 2017 Dr. <a href="../index.html" style="color:#EB7500;text-decoration:none;">Yangang
+                        Wang</a>. All Rights Reserved.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+		$(function() {
+			$('.lazy').Lazy({
+                effect : "fadeIn"
+            });
+		});
+	</script>
+</body>
+
+</html>
