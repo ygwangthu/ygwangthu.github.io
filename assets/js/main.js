@@ -33,7 +33,7 @@
 				breakpoints: {
 					desktop: {
 						width: 1080,
-						scalable: true
+						scalable: false
 					}
 				}
 			})
