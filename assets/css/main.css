@@ -300,9 +300,11 @@ article {
 	padding: 0.5em 0 0 0;
 }
 	#footer .copyright li {
-		display: inline-block;
+		display: block;
+		list-style: none;
 	}
 		#footer .copyright li:before {
+			list-style: none;
 			display: inline;
 			content: '\2022';
 			opacity: 0.5;
@@ -310,6 +312,7 @@ article {
 		}
 
 		#footer .copyright li:first-child:before {
+			list-style: none;
 			display: none;
 		}
 
