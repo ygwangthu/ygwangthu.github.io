@@ -1,0 +1,131 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Object-Occluded Human Shape and Pose Estimation from a Single Color Image</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="icon" href="../images/logo.ico" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    
+    <!-- Scripts -->
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.lazy/1.7.10/jquery.lazy.min.js"></script>
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main" class="panel" style="margin-top:2em;line-height:1.3em">
+            <article id="news" class="panel">
+                <!-- head -->
+                <div style="font-size:0.75em;text-align:center;padding-top:0.5em">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2020</div>
+                <div style="font-size:1.0em;font-weight:bold;padding:1em 0.5em;text-align:center">Object-Occluded Human Shape and Pose Estimation from a Single Color Image</div>
+                <div style="font-size:0.75em;padding-bottom:1em;text-align:center">
+                    <div style="display:inline-block;">Tianshu Zhang, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;">Buzhen Huang, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;"><a target="_blank" href="https://www.yangangwang.com/"
+                    style="color:#EB7500">Yangang Wang</a></div>              
+                </div>
+                <div style="font-size:0.75em;padding-bottom:1em;text-align:center">
+                    <div style="display:inline-block;"><a target="_blank" href="http://www.seu.edu.cn/english/main.htm" style="font-weight:bold">Southeast University</a></div>
+                </div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;;margin-bottom:1em"/>
+
+                <!-- teaser -->
+                <div style="text-align:center;"><img class="lazy" width="90%" data-src="ZHANG-OOH-2020-03-pipeline.png"></div>
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em"><div style="font-weight:bold;display:inline-block">Overview of the proposed two-branch network.</div> At the training stage, UV map inpainting branch(a) is trained at first. Then, the occluded color image is concatenated with its saliency map(b) and fed to color image encoder(c). The corresponding partial UV map is encoded by fixed inpainting network and used for supervising the color image encoder in latent space(d). At the inference stage, a single color image is passed through the saliency map sub-net(b) and the occluded human reconstruction sub-net(c). The output mesh is directly re-sampled from the UV position map. </div>
+
+                <!-- abstract -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em;">Abstract</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em">Occlusions between human and objects, especially for the activities of human-object interactions, are very common in practical applications. However, most of the existing approaches for 3D human shape and pose estimation require human bodies are well captured without occlusions or with minor self-occlusions. In this paper, we focus on the problem of directly estimating the object-occluded human shape and pose from single color images. Our key idea is to utilize a partial UV map to represent an object-occluded human body, and the full 3D human shape estimation is ultimately converted as an image inpainting problem. We propose a novel two-branch network architecture to train an end-to-end regressor via the latent feature supervision, which also includes a novel saliency map sub-net to extract the human information from object-occluded color images. To supervise the network training, we further build a novel dataset named as <div style="font-weight:bold;display:inline-block">3DOH50K</div>. Several experiments are conducted to reveal the effectiveness of the proposed method. Experimental results demonstrate that the proposed method achieves the state-of-the-art comparing with previous methods.</div>
+
+                <!-- Code -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Running Code and Trained Model</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em;">
+                    Here, we release the source code (under Nvidia 1080Ti with <a target="_blank" href="https://developer.nvidia.com/cuda-downloads">CUDA10.1</a> and <a target="_blank" href="https://developer.nvidia.com/cudnn">cuDNN7.6</a>, Win10). You can directly run the code with the given model. <div style="font-weight:bold;display:inline-block"></div>
+                    <p>
+                        <span style="font-size:0.9em;"><a target="_blank">Source Code (coming soon) <i class="fa fa-arrow-right"></i></a></span>&nbsp&nbsp&nbsp&nbsp<span style="font-size:0.9em;"><a target="_blank">Trained Model (coming soon) <i class="fa fa-arrow-right"></i></a></span>
+                    </p>
+                    The rights to copy, distribute, and use the code are being given access to are under the control of Yangang Wang, director of the Vision and Cognition Lab, Southeast University. In this case, credit must be given to: *Object-Occluded Human Shape and Pose Estimation from a Single Color Image*. <div style="font-weight:bold;display:inline-block">Any commercial use is not allowed</div>. I am very glad to receive your feedbacks about this code. 
+
+                </div>
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">3DOH50K Dataset</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em;">
+                    <div style="text-align:center"><img class="lazy" width="100%" src="ZHANG-OOH-2020-03-dataset.png"></div>
+                    <div style="font-weight:bold;display:inline-block">3DOH50K</div> is the first real 3D human dataset for the problem of human reconstruction and pose estimation in occlusion scenarios. It contains 51600 images with accurate 2D pose and 3D pose, SMPL parameters, and binary mask.
+                    <p>
+                        <span style="font-size:0.9em;"><a target="_blank">3DOH50K Dataset (coming soon) <i class="fa fa-arrow-right"></i></a></span>
+                    </p>
+
+
+                </div>
+
+                <!-- results -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Results</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="text-align:center"><img class="lazy" width="90%" src="ZHANG-OOH-2020-03-results.png"></div>
+                <div style="font-size:0.75em;text-align:center;line-height:1.4em;">
+                    Results on 3DPW (rows 1-2), 3DOH50K (rows 3-4) and Synthetic Human3.6M dataset (rows 5-6).
+                </div>
+
+                <!-- materials -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Materials</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <table>
+                    <tr>
+                        <td style="width:25%;padding:0em 0.5em;border-right:1px solid #dedddd">
+                            <a target="_blank" title="paper"><div class="image_carousel"><img class="lazy" width="100%" data-src="ZHANG-OOH-2020-03-paper.png"></div></a>
+                            <hr style="height:1px;border:none;border-top:1px solid #dedddd;" />
+                            <div style="font-size:0.7em;text-align:left;line-height:1.4em">Related links</div>
+                            <ul style="font-size:0.6em;line-height:1.4em;margin-top:0em;">
+                                <li><a target="_blank">Download Paper</a></li>
+                                <li><a target="_blank">Download Supplementary Material</a></li>
+                                <li><a target="_blank">Download Bibtex</a></li>
+                                <li><a target="_blank">IEEE Digital Library</a></li>
+                                <li><a target="_blank" href="https://youtu.be/8udm2OB0A-U">Video on YouTube</a></li>
+                            </ul>
+                        </td>
+                        <td style="width:65%;padding:0em 0.3em">
+                            <div class="video-container">
+                                <iframe id="ooh" src="" width="960" height="540" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Reference -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:1em">Reference</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="background-color:#ddd;margin-bottom:1em">
+                    <div style="text-align:left;font-size:0.75em;line-height:1.4em;padding:1em 1em">Tianshu Zhang, Buzhen Huang and Yangang Wang. "<strong>Object-Occluded Human Shape and Pose Estimation from a Single Color Image</strong>". <i>IEEE International Conference on Computer Vision and Pattern Recognition, (CVPR)</i>, 2020.</div>
+                </div>
+
+                <!-- acknowledgements -->
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em"><strong>Acknowledgments:</strong> This work was supported in part by National Natural Science Foundation of China (No. 61806054), in part by Natural Science Foundation of Jiangsu Province (No. BK20180355), in part by National Key R&D Program of China (No. 2018YFB1403900), in part by Shenzhen Science and Technology Innovation Committee (STIC) (No. JCYJ20180306174459972) and ""Zhishan Young Scholar" Program of Southeast University.</div>
+            </article>
+        </div>
+
+        <!-- Footer -->
+		<div id="footer">
+            <ul style="list-style: none;"> 
+                <li>&copy; 2019 Dr. <a href="../index.html" style="color:#EB7500;text-decoration:none;">Yangang Wang</a>. All Rights Reserved. </li>
+                <li><div style="display: flex;justify-content: center;align-items: center;"><img src="../images/beian.png">&nbsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011502011122" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">苏公网安备 32011502011122号</a>&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.beian.miit.gov.cn/" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">京ICP备20006779号</a></div></li>
+            </ul>
+		</div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+		$(function() {
+			$('.lazy').Lazy({
+                effect : "fadeIn"
+            });
+		});
+	</script>
+    <script>setTimeout(function(){document.getElementById('ooh').src = 'https://www.youtube.com/embed/8udm2OB0A-U';},50)</script>
+</body>
+</html>
