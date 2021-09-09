@@ -65,9 +65,9 @@ article {
    }
 /* image */
 .image_carousel img {
-	box-shadow: 0px 0px 10px 3px #ccc;
 	-webkit-box-shadow: 0px 0px 10px 3px #ccc;
 	-moz-box-shadow: 0px 0px 10px 3px #ccc;
+	box-shadow: 0px 0px 10px 3px #ccc;
 }
 /* Email */
 .hide { display: none; }
