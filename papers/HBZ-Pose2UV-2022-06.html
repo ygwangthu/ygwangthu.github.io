@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://www.yangangwang.com/papers/ZHANG-OOH-2020-03.html -->
+<html><head>
+    <meta charset="utf-8">
+    <!--meta http-equiv="Content-Type" content="text/html; charset=UTF-8"-->
+	<title>Pose2UV: Single-shot Multi-person Mesh Recovery with Deep UV Prior</title>
+	
+    <!--适应设备屏幕-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="icon" href="../images/logo.ico" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    
+    <!--待修改-->
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.lazy.min.js"></script>
+</head>
+
+<body class="">
+    <div id="wrapper">
+        <div id="main" class="panel" style="margin-top:2em;line-height:1.3em">
+            <article id="news" class="panel">
+                <!-- head -->
+                <div style="font-size:0.75em;text-align:center;padding-top:0.5em">IEEE Transactions on Image Processing (TIP)</div>
+                <div style="font-size:1.0em;font-weight:bold;padding:1em 0.5em;text-align:center">Pose2UV: Single-shot Multi-person Mesh Recovery with Deep UV Prior</div>
+                <div style="font-size:0.75em;padding-bottom:1em;text-align:center">
+                    <div style="display:inline-block;">Buzhen Huang, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;">Tianshu Zhang, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;"><a target="_blank" href="https://www.yangangwang.com/" style="color:#EB7500">Yangang Wang</a></div>              
+                </div>
+                <div style="font-size:0.75em;padding-bottom:1em;text-align:center">
+                    <div style="display:inline-block;"><a target="_blank" href="http://www.seu.edu.cn/english/main.htm" style="font-weight:bold">Southeast University</a></div>
+                </div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;;margin-bottom:1em">
+
+                <!-- teaser -->
+                <div style="text-align:center;"><img class="lazy" width="100%" src="./Pose2UV/HUANG-Pose2UV-2022-06-pipeline.png" style=""></div>
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em"><div style="font-weight:bold;display:inline-block">Overview of the proposed framework.</div> Given a challenging multi-person image, we first utilize the predicted 2D pose to locate and crop each individual. The heatmaps and image patch of each person are then fed to the visible pose-mask module (a) to estimate the visible heatmaps and masks. With the help of the proposed UVPrior (c), the UV Prediction Module (b) regresses a plausible UV position map from partial body cues. We can resample the predicted map to obtain a human mesh. Finally, we calculate the absolute position based on the regressed 3D joints and the visible 2D joints (d). </div>
+
+                <!-- abstract -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em;">Abstract</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em">
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em">In this work, we focus on the task of multi-person mesh recovery from a single color image, where the key issue is to tackle the pixel-level ambiguities caused by inter-person occlusions. Overall, there are two main technical challenges when addressing the ambiguities: how to extract valid target features under occlusions and how to reconstruct reasonable human meshes with only a handful of body cues? To deal with these problems, our key idea is to utilize the predicted 2D poses to locate and separate the target person, and reconstruct them with a novel learning-based UV prior. Specifically, we propose a visible pose-mask module to help extract valid target features, then train a dense body mesh prior to promote reconstructing natural mesh represented by the UV position map. To evaluate the performance of our proposed method under occlusions, we further build an in-the-wild 3D multi-person benchmark named as 3DMPB. Experimental results demonstrate that our method achieves state-of-the-art compared with previous methods. </div>
+
+                <!-- Code -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">3DMPB Dataset</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em">
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em;">
+                    <!--改为dataset-->
+                    We build an in-the-wild 3D multi-person benchmark, <div style="font-weight:bold;display:inline-block">3DMPB</div>, which provides a lot of human-human interactions and inter-person occlusions cases with challenging poses in real basketball scenes. The annotations are obtained with <a target="_blank" href="https://github.com/boycehbz/DMMR">DMMR</a>.
+                    <p>
+                        <!--地址填空-->
+                        <span style="font-size:0.9em;"><a target="_blank" href="  ">Download 3DMPB Dataset (coming soon)<i class="fa fa-arrow-right"></i></a></span><!--&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:0.9em;"><a target="_blank" href="  ">Trained Model<i class="fa fa-arrow-right"></i></a></span>-->
+                    </p>
+                    <div style="text-align:center"><img class="lazy" width="100%" src="./Pose2UV/HUANG-Pose2UV-2022-06-dataset.jpg"></div>
+                    
+
+                </div>
+                
+
+                <!-- results -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Results</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em">
+                <div style="text-align:center"><img class="lazy" width="100%" src="./Pose2UV/HUANG-Pose2UV-2022-06-results.png"></div>
+                <!--div style="font-size:0.75em;text-align:center;line-height:1.4em;">
+                    Results on Human3.6M (row 1-2), 3DOH (row 3-4) and GPA (row 5-6) dataset.
+                </div -->
+
+                <!-- materials -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Materials</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em">
+                <table>
+                    <tbody><tr>
+                        <td style="width:25%;padding:0em 0.5em;border-right:1px solid #dedddd">
+                            <a target="_blank" title="paper"><div class="image_carousel"><img class="lazy" width="100%" src="./Pose2UV/HUANG-Pose2UV-2022-06-paper.png" style=""></div></a>
+                            <hr style="height:1px;border:none;border-top:1px solid #dedddd;">
+                            <div style="font-size:0.7em;text-align:left;line-height:1.4em">Related links</div>
+                            <ul style="font-size:0.6em;line-height:1.4em;margin-top:0em;">
+                                <li><a target="_blank" href="https://www.yangangwang.com/papers/HBZ-pose2uv-2022-06.pdf">Download Paper</a></li>
+                                <!--li><a target="_blank" href="">Download Supplementary Material</a></li -->
+                                <li><a target="_blank" href="./Pose2UV/HBZ-Pose2UV-2022-06.bib">Download Bibtex</a></li>
+                                <li><a target="_blank">IEEE Digital Library</a></li>
+                                <!--视频地址未改-->
+                                <li><a target="_blank" href="https://www.bilibili.com/video/BV19t4y1h7vJ?share_source=copy_web">Video on bilibili</a></li>
+                            </ul>
+                        </td>
+                        <td style="width:70%;padding:0em 0.3em">
+                            <div class="video-container">
+                                <!--iframe id="ooh" src="./NeuralMoCon/8udm2OB0A-U.html" width="960" height="540" frameborder="0" allowfullscreen=""></iframe-->
+                                <iframe src="http://player.bilibili.com/player.html?aid=982674188&bvid=BV19t4y1h7vJ&cid=752287608&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="960" height="540"> </iframe>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody></table>
+
+                <!-- Reference -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:1em">Reference</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em">
+                <div style="background-color:#ddd;margin-bottom:1em">
+                    <div style="text-align:left;font-size:0.75em;line-height:1.4em;padding:1em 1em">Buzhen Huang, Tianshu Zhang and Yangang Wang. "<strong>Pose2UV: Single-shot Multi-person Mesh Recovery with Deep UV Prior</strong>". <i>IEEE Transactions on Image Processing (TIP)</i>, 2022.</div>
+                </div>
+
+                <!-- acknowledgements -->
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em"><strong>Acknowledgments:</strong> This work was supported in part by the National Natural Science Foundation of China (No. 62076061), the “Young Elite Scientists Sponsorship Program by CAST” (No. YES20200025), and the “Zhishan Young Scholar” Program of Southeast University (No. 2242021R41083). </div>
+            </article>
+        </div>
+
+        <!-- Footer -->
+		<div id="footer">
+            <ul style="list-style: none;"> 
+                <li>© 2019 Dr. <a href="https://www.yangangwang.com/index.html" style="color:#EB7500;text-decoration:none;">Yangang Wang</a>. All Rights Reserved. </li>
+                <li><div style="display: flex;justify-content: center;align-items: center;"><img src="./Pose2UV/beian.png">&nbsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011502011122" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">苏公网安备 32011502011122号</a>&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.beian.miit.gov.cn/" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">京ICP备20006779号</a></div></li>
+            </ul>
+		</div>
+    </div>
+
+    <!--待修改-->
+    <script src="./Pose2UV/main.js.下载"></script>
+    <script>
+		$(function() {
+			$('.lazy').Lazy({
+                effect : "fadeIn"
+            });
+		});
+	</script>
+    <script>setTimeout(function(){document.getElementById('ooh').src = 'https://www.youtube.com/embed/8udm2OB0A-U';},50)</script>
+
+</body></html>
+
