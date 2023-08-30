@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Nonrigid Object Contact Estimation With Regional Unwrapping Transformer</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="icon" href="../../assets/images/logo.ico" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    
+    <!-- Scripts -->
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery.lazy.min.js"></script>
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main" class="panel" style="margin-top:2em;line-height:1.3em">
+            <article id="news" class="panel">
+                <!-- head -->
+                <div style="font-size:0.75em;text-align:center;padding-top:0.5em">IEEE/CVF International Conference on Computer Vision (ICCV), 2023</div>
+                <div style="font-size:1.0em;font-weight:bold;padding:1em 0.5em;text-align:center">Nonrigid Object Contact Estimation With Regional Unwrapping Transformer</div>
+                <div style="font-size:0.75em;padding-bottom:1em;text-align:center">
+                    <div style="display:inline-block;">Wei Xie, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;">Zimeng Zhao, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;">Shiying Li, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;">Binghui Zuo, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;"><a target="_blank" href="http://yangangwang.com/" style="color:#EB7500">Yangang Wang</a></div>&nbsp;&nbsp; 
+                </div>
+                <div style="font-size:0.75em;padding-bottom:1em;text-align:center">
+                    <div style="display:inline-block;"><a target="_blank" href="http://www.seu.edu.cn/english/main.htm" style="font-weight:bold">Southeast University</a></div>&nbsp;&nbsp;
+                </div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;;margin-bottom:1em"/>
+
+                <!-- teaser -->
+                <div style="text-align:center;"><img class="lazy" width="100%" data-src="XIE-NONRIGID-2023-07-pipeline.jpg"></div>
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em"><div style="font-weight:bold;display:inline-block">Overview of RUFormer.</div> (a) The preparation process of RUFormer input data, all of which are aligned to the hand 16 regions. (b) RUFormer Encoder estimates hand-object regional contact areas from image patches, hand bone transformation and RUPs. (c) RUFormer Decoder estimates fine-grained deformation from grid-wise sampling features. </div>
+
+                <!-- abstract -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em;">Abstract</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em">Acquiring contact patterns between hands and nonrigid objects is a common concern in the vision and robotics community. However, existing learning-based methods focus more on contact with rigid ones from monocular images. When adopting them for nonrigid contact, a major problem is that the existing contact representation is restricted by the geometry of the object. Consequently, contact neighborhoods are stored in an unordered manner and contact features are difficult to align with image cues. At the core of our approach lies a novel hand-object contact representation called RUPs (Region Unwrapping Profiles), which unwrap the roughly estimated hand-object surfaces as multiple high-resolution 2D regional profiles. The region grouping strategy is consistent with the hand kinematic bone division because they are the primitive initiators for a composite contact pattern. Based on this representation, our Regional Unwrapping Transformer (RUFormer) learns the correlation priors across regions from monocular inputs and predicts corresponding contact and deformed transformations. Our experiments demonstrate that the proposed framework can robustly estimate the deformed degrees and deformed transformations, which makes it suitable for both nonrigid and rigid contact.</div>
+
+                <!-- results -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Results</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="text-align:center"><img class="lazy" width="100%" src="XIE-NONRIGID-2023-07-result.jpg"></div>
+                <div style="font-size:0.75em;text-align:center;line-height:1.4em;">
+                    Comparisons on contact patterns optimization. Row1, Row2 and Row 3 are 3D nonrigid interactions. Row4 is 3D rigid interaction.
+                </div>
+
+                <!-- materials -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Materials</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <table>
+                    <tr>
+                        <td style="width:25%;padding:0em 0.5em;border-right:1px solid #dedddd">
+                            <a target="_blank" href="https://arxiv.org/abs/2308.14074" title="paper"><div class="image_carousel"><img class="lazy" width="100%" data-src="XIE-NONRIGID-2023-07-paper.jpg"></div></a>
+                            <hr style="height:1px;border:none;border-top:1px solid #dedddd;" />
+                            <div style="font-size:0.7em;text-align:left;line-height:1.4em">Related links</div>
+                            <ul style="font-size:0.6em;line-height:1.4em;margin-top:0em;">
+                                <li><a target="_blank" href="https://arxiv.org/abs/2308.14074">Download Paper</a></li>
+                                <li><a target="_blank" href="XIE-NONRIGID-2023-07.bib">Download Bibtex</a></li>
+                            </ul>
+                        </td>
+                        <td style="width:75%;padding:0em 0.3em">
+                            <div class="video-container">
+                                <!-- <iframe id="interprior" src="" width="1280" height="720" frameborder="0" allowfullscreen></iframe> -->
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Reference -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:1em">Reference</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="background-color:#ddd;margin-bottom:1em">
+                    <div style="text-align:left;font-size:0.75em;line-height:1.4em;padding:1em 1em">Wei Xie, Zimeng Zhao, Shiying Li, Binghui Zuo and Yangang Wang. "<strong>Nonrigid Object Contact Estimation With Regional Unwrapping Transformer</strong>". <i>IEEE/CVF International Conference on Computer Vision (ICCV), 2023.</i></div>
+                </div>
+
+                <!-- acknowledgements -->
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em"><strong>Acknowledgments:</strong> This work was supported in part by the National Natural Science Foundation of China (No. 62076061), in part by the Natural Science Foundation of Jiangsu Province (No. BK20220127).</div>
+            </article>
+        </div>
+
+        <!-- Footer -->
+		<div id="footer">
+            <ul style="list-style: none;"> 
+                <li>&copy; 2019 Dr. <a href="../../index.html" style="color:#EB7500;text-decoration:none;">Yangang Wang</a>. All Rights Reserved. </li>
+                <li><div style="display: flex;justify-content: center;align-items: center;"><img src="../../assets/images/beian.png">&nbsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011502011122" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">苏公网安备 32011502011122号</a>&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.beian.miit.gov.cn/" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">京ICP备20006779号</a></div></li>
+            </ul>
+		</div>
+    </div>
+
+    <script src="../../assets/js/main.js"></script>
+    <script>
+		$(function() {
+			$('.lazy').Lazy({
+                effect : "fadeIn"
+            });
+		});
+	</script>
+    <script>setTimeout(function(){document.getElementById('interprior').src = 'https://player.bilibili.com/player.html?bvid=BV1xu411N7dQ&page=1';},50)</script>
+</body>
+</html>

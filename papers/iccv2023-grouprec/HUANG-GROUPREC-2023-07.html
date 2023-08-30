@@ -1,0 +1,116 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Reconstructing Groups of People with Hypergraph Relational Reasoning</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="icon" href="../../assets/images/logo.ico" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    
+    <!-- Scripts -->
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery.lazy.min.js"></script>
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main" class="panel" style="margin-top:2em;line-height:1.3em">
+            <article id="news" class="panel">
+                <!-- head -->
+                <div style="font-size:0.75em;text-align:center;padding-top:0.5em">IEEE/CVF International Conference on Computer Vision (ICCV), 2023</div>
+                <div style="font-size:1.0em;font-weight:bold;padding:1em 0.5em;text-align:center">Reconstructing Groups of People with Hypergraph Relational Reasoning</div>
+                <div style="font-size:0.75em;padding-bottom:1em;text-align:center">
+                    <div style="display:inline-block;">Buzhen Huang<sup>1</sup>, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;">Jingyi Ju<sup>1</sup>, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;">Zhihao Li<sup>2</sup>, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;"><a target="_blank" href="http://yangangwang.com/" style="color:#EB7500">Yangang Wang<sup>1</sup></a></div>&nbsp;&nbsp;              
+                </div>
+                <div style="font-size:0.75em;padding-bottom:1em;text-align:center">
+                    <div style="display:inline-block;"><sup>1</sup><a target="_blank" href="http://www.seu.edu.cn/english/main.htm" style="font-weight:bold">Southeast University</a></div>&nbsp;&nbsp;
+                    <div style="display:inline-block;"><sup>2</sup><a target="_blank" href="http://dev3.noahlab.com.hk/" style="font-weight:bold">Huawei Noah’s Ark Lab</a></div>&nbsp;&nbsp;
+                </div>
+
+                <!-- teaser -->
+                <div style="text-align:center;"><img class="lazy" width="100%" data-src="HUANG-GROUPREC-2023-07-teaser.jpg"></div>
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em"> We exploit human collectiveness and correlation in crowds to improve human mesh recovery in large-scale crowded scenes (more than 50 people). </div>
+
+                <!-- abstract -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em;">Abstract</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em">Due to the mutual occlusion, severe scale variation, and complex spatial distribution, the current multi-person mesh recovery methods cannot produce accurate absolute body poses and shapes in large-scale crowded scenes. To address the obstacles, we fully exploit crowd features for reconstructing groups of people from a monocular image. A novel hypergraph relational reasoning network is proposed to formulate the complex and high-order relation correlations among individuals and groups in the crowd. We first extract compact human features and location information from the original high-resolution image. By conducting the relational reasoning on the extracted individual features, the underlying crowd collectiveness and interaction relationship can provide additional group information for the reconstruction. Finally, the updated individual features and the localization information are used to regress human meshes in camera coordinates. To facilitate the network training, we further build pseudo ground-truth on two crowd datasets, which may also promote future research on pose estimation and human behavior understanding in crowded scenes. The experimental results show that our approach outperforms other baseline methods both in crowded and common scenarios.</div>
+
+                <!-- dataset -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Dataset</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em;">
+                    We follow the previous pseudo annotator (EFT) to build 3D pseudo ground-truth for Panda and CrowdPose. We also manually filter the incorrect estimations in the camera view. Different from previous pseudo annotators, the adaption explicitly considers the crowd interactions and constraints in multi-person scenarios. The 3D models in the final dataset have plausible ordinal relationships and are consistent with image observations.
+                    <p>
+                        <span style="font-size:0.9em;"><a target="_blank" href="">Dataset <i class="fa fa-arrow-right"></i></a></span>
+                    </p>
+                </div>
+                
+                <!-- results -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Results</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="text-align:center"><img class="lazy" width="100%" src="HUANG-GROUPREC-2023-07-result.jpg">
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em"> Our method produces accurate body poses and reasonable spatial distribution on Internet images. Our method is more robust to scale variations and occlusions. In addition, the proposed approach can also reconstruct crowds with more reasonable ordinal relationships.
+                </div>
+
+                <!-- materials -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Materials</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <table>
+                    <tr>
+                        <td style="width:25%;padding:0em 0.5em;border-right:1px solid #dedddd">
+                            <a target="_blank" href="" title="paper"><div class="image_carousel"><img class="lazy" width="100%" data-src="HUANG-GROUPREC-2023-07-paper.jpg"></div></a>
+                            <hr style="height:1px;border:none;border-top:1px solid #dedddd;" />
+                            <div style="font-size:0.7em;text-align:left;line-height:1.4em">Related links</div>
+                            <ul style="font-size:0.6em;text-align:left;line-height:1.4em;margin-top:0em;">
+                                <li><a target="_blank" href="">Download Paper</a></li>
+                                <li><a target="_blank" href="HUANG-GROUPREC-2023-07-supp.pdf">Download Supplementary Material</a></li>
+                                <li><a target="_blank" href="HUANG-GROUPREC-2023-07.bib">Download Bibtex</a></li>
+                                <li><a target="_blank" href="">IEEE Digital Library</a></li>
+                            </ul>
+                        </td>
+                        <td style="width:75%;padding:0em 0.3em">
+                            <div class="video-container">
+                                <!-- <iframe id="hand2d" src="" width="1280" height="720" frameborder="0" allowfullscreen></iframe> -->
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Reference -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:1em">Reference</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="background-color:#ddd;margin-bottom:1em">
+                    <div style="text-align:left;font-size:0.75em;line-height:1.4em;padding:1em 1em">Buzhen Huang, Jingyi Ju, Zhihao Li and Yangang Wang. "<strong>Reconstructing Groups of People with Hypergraph Relational Reasoning</strong>". <i>IEEE/CVF International Conference on Computer Vision (ICCV), 2023.</i></div>
+                </div>
+
+                <!-- acknowledgements -->
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em"><strong>Acknowledgments:</strong> This work was supported in part by the National Natural Science Foundation of China (No. 62076061), the Natural Science Foundation of Jiangsu Province (No. BK20220127).</div>
+            </article>
+        </div>
+
+        <!-- Footer -->
+		<div id="footer">
+            <ul style="list-style: none;"> 
+                <li>&copy; 2019 Dr. <a href="../../index.html" style="color:#EB7500;text-decoration:none;">Yangang Wang</a>. All Rights Reserved. </li>
+                <li><div style="display: flex;justify-content: center;align-items: center;"><img src="../../assets/images/beian.png">&nbsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011502011122" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">苏公网安备 32011502011122号</a>&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.beian.miit.gov.cn/" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">京ICP备20006779号</a></div></li>
+            </ul>
+		</div>
+    </div>
+
+    <script src="../../assets/js/main.js"></script>
+    <script>
+		$(function() {
+			$('.lazy').Lazy({
+                effect : "fadeIn"
+            });
+		});
+	</script>
+    <script>setTimeout(function(){document.getElementById('hand2d').src = 'https://www.youtube.com/embed/YdsajJ8sxqg';},50)</script>
+</body>
+</html>
