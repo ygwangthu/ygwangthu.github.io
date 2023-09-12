@@ -8,6 +8,7 @@
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="icon" href="../../assets/images/logo.ico" />
     <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link href="../../assets/css/font-awesome.min.css" rel="stylesheet">
     
     <!-- Scripts -->
     <script src="../../assets/js/jquery.min.js"></script>
@@ -41,7 +42,7 @@
                 <div style="text-align:left;font-size:0.75em;line-height:1.4em">Estimating the shape and motion state of the myocardium is essential in diagnosing cardiovascular diseases. However, cine magnetic resonance (CMR) imaging is dominated by 2D slices, whose large slice spacing challenges inter-slice shape reconstruction and motion acquisition. To address this problem, we propose a 4D reconstruction method that decouples motion and shape, which can predict the <div style="font-weight:bold;display:inline-block">inter-/intra-</div> shape and motion estimation from a given sparse point cloud sequence obtained from limited slices. Our framework comprises a neural motion model and an end-diastolic (ED) shape model. The implicit ED shape model can learn a continuous boundary and encourage the motion model to predict without the supervision of ground truth deformation, and the motion model enables canonical input of the shape model by deforming any point from any phase to the ED phase. Additionally, the constructed <div style="font-weight:bold;display:inline-block">ED-space</div> enables pre-training of the shape model, thereby guiding the motion model and addressing the issue of data scarcity. We propose the first 4D myocardial dataset (<div style="font-weight:bold;display:inline-block">4DM Dataset</div>) as we know and verify our method on the proposed, public, and cross-modal datasets, showing superior reconstruction performance and enabling various clinical applications.</div>
 
                 <!-- Code and dataset -->
-                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Code and Dataset</div>
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em" id="dataset">Code and Dataset</div>
                 <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
                 <div style="font-size:0.75em;text-align:left;line-height:1.4em;">
                     Here, we release the source code and dataset.
