@@ -8,10 +8,10 @@
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="icon" href="../images/logo.ico" />
     <link rel="stylesheet" href="../assets/css/main.css" />
-    
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet">
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.10/jquery.lazy.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.lazy.min.js"></script>
 </head>
 
 <body class="is-preload">
@@ -33,7 +33,7 @@
                 <hr style="height:1px;border:none;border-top:1px solid #dedddd;;margin-bottom:1em"/>
 
                 <!-- teaser -->
-                <div style="text-align:center;"><img class="lazy" width="100%" src="./SCR/fig01_pipeline.jpg" style=""></div>
+                <div style="text-align:center;"><img class="lazy" width="100%" src="./SCR/fig01_pipeline.jpg" loading="lazy"></div>
                 <div style="text-align:left;font-size:0.75em;line-height:1.4em"><div style="font-weight:bold;display:inline-block">Stable contact reconstruction pipeline.</div> (a) Hand-object state represented by implicit ellipsoids is estimated from the input image; (b) Simulated interaction scene is direct constructed from the estimated parameters; (c) The optimization process is driven by the stability cost in simulation to get more reliable states iteratively. </div>
 
                 <!-- abstract -->
@@ -43,16 +43,22 @@
                 
                 <div style="font-size:0.9em;font-weight:bold;padding-top:2em;" id="dataset">Dataset</div>
                 <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
-                <div style="text-align:center;"><img class="lazy" width="100%" src="./SCR/fig02_system.jpg" style=""></div>
-                <div style="text-align:left;font-size:0.75em;line-height:1.4em"><p>Our <b>CBF</b> dataset (hand-object Contact with Balancing Force recording, version 0.1) dataset contains 25 views of 20 subjects interacting with 10 objects in 5 poses, and provides ground-truth annotations for meshes and masks of hands and objects. It can be downloaded through any of the links below :</p>
-                    <br>- <a href="https://pan.seu.edu.cn/#/link/49FA8AC060F9801261509D7ED207026E?path=">SEU Disk.</a>
-                    <br>- <a href="https://pan.baidu.com/s/1mMuDWUQbv6E7jHWLmQkhrg?pwd=pmyq">BaiduYun Disk</a>
+                <div style="text-align:center;"><img class="lazy" width="100%" src="./SCR/fig02_system.jpg" loading="lazy"></div>
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em"><p>Our <b>CBF</b> dataset (hand-object Contact with Balancing Force recording, version 0.1) dataset contains 25 views of 20 subjects interacting with 10 objects in 5 poses, and provides ground-truth annotations for meshes and masks of hands and objects. It can be downloaded through any of the links below</p>
+                    <ul>
+                        <li><a href="https://pan.seu.edu.cn/#/link/49FA8AC060F9801261509D7ED207026E?path=">SEU Disk <i class="fa fa-arrow-right"></i></a></li>
+                        <li><a href="https://pan.baidu.com/s/1mMuDWUQbv6E7jHWLmQkhrg?pwd=pmyq">BaiduYun Disk <i class="fa fa-arrow-right"></i></a></li>
+                    </ul>
                 </div>
+
+                <div style="font-weight:bold;font-size:0.75em;text-align:left;line-height:1.4em;padding-top: 1em;">
+                    The rights to copy, distribute, and use the hand-object Contact with Balancing Force dataset (henceforth called "CBF") you are being given access to are under the control of Yangang Wang, director of the Vision and Cognition Lab, Southeast University. You are hereby given permission to copy this data in electronic or hardcopy form for your own scientific use and to distribute it for scientific use to colleagues within your research group. Inclusion of images or video made from this data in a scholarly publication (printed or electronic) is also permitted. In this case, credit must be given to the publication: *Stability-driven Contact Reconstruction From Monocular Color Images*. For any other use, including distribution outside your research group, written permission is required from Yangang Wang. <div style="color:red;display:inline-block">Any commercial use is not allowed</div>. Commercial use includes but is not limited to sale of the data, derivatives, replicas, images, or video, inclusion in a product for sale, or inclusion in advertisements (printed or electronic), on commercially-oriented web sites, or in trade shows.
+                    </div>
 
                 <!-- results -->
                 <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Results</div>
                 <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em">
-                <div style="text-align:center"><img class="lazy" width="90%" src="./SCR/fig03_results.jpg"></div>
+                <div style="text-align:center"><img class="lazy" width="90%" src="./SCR/fig03_results.jpg" loading="lazy"></div>
                 <div style="font-size:0.75em;text-align:center;line-height:1.4em;">
                     Contact Recovery Results on DexYCB (row 1-2) and ContactPose (row 3-4) dataset.
                 </div>

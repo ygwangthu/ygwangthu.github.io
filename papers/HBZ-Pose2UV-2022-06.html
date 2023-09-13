@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<!-- saved from url=(0057)https://www.yangangwang.com/papers/ZHANG-OOH-2020-03.html -->
-<html><head>
-    <meta charset="utf-8">
-    <!--meta http-equiv="Content-Type" content="text/html; charset=UTF-8"-->
+<!DOCTYPE HTML>
+<html>
+<head>
 	<title>Pose2UV: Single-shot Multi-person Mesh Recovery with Deep UV Prior</title>
-	
-    <!--适应设备屏幕-->
+    <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -44,7 +41,7 @@
                 <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em">
                 <div style="text-align:left;font-size:0.75em;line-height:1.4em">In this work, we focus on the task of multi-person mesh recovery from a single color image, where the key issue is to tackle the pixel-level ambiguities caused by inter-person occlusions. Overall, there are two main technical challenges when addressing the ambiguities: how to extract valid target features under occlusions and how to reconstruct reasonable human meshes with only a handful of body cues? To deal with these problems, our key idea is to utilize the predicted 2D poses to locate and separate the target person, and reconstruct them with a novel learning-based UV prior. Specifically, we propose a visible pose-mask module to help extract valid target features, then train a dense body mesh prior to promote reconstructing natural mesh represented by the UV position map. To evaluate the performance of our proposed method under occlusions, we further build an in-the-wild 3D multi-person benchmark named as 3DMPB. Experimental results demonstrate that our method achieves state-of-the-art compared with previous methods. </div>
 
-                <!-- Code -->
+                <!-- dataset -->
                 <div style="font-size:0.9em;font-weight:bold;padding-top:2em" id="dataset">3DMPB Dataset</div>
                 <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em">
                 <div style="font-size:0.75em;text-align:left;line-height:1.4em;">
@@ -58,8 +55,10 @@
                         </p><div style="font-size:0.9em;">[Video Version] <a target="_blank" href="https://pan.baidu.com/s/19OZSEOu330Gul89IobKvbQ?pwd=xcyv">Download 3DMPB Video Dataset <i class="fa fa-arrow-right"></i></a></div>
                     </p>
                     <div style="text-align:center"><img class="lazy" width="100%" src="./Pose2UV/HUANG-Pose2UV-2022-06-dataset.jpg"></div>
-                    
+                </div>
 
+                <div style="font-weight:bold;font-size:0.75em;text-align:left;line-height:1.4em;padding-top: 1em;">
+                    The rights to copy, distribute, and use the 3DMPB dataset (henceforth called "3DMPB") you are being given access to are under the control of Yangang Wang, director of the Vision and Cognition Lab, Southeast University. You are hereby given permission to copy this data in electronic or hardcopy form for your own scientific use and to distribute it for scientific use to colleagues within your research group. Inclusion of images or video made from this data in a scholarly publication (printed or electronic) is also permitted. In this case, credit must be given to the publication: *Pose2UV: Single-shot Multi-person Mesh Recovery with Deep UV Prior*. For any other use, including distribution outside your research group, written permission is required from Yangang Wang. <div style="color:red;display:inline-block">Any commercial use is not allowed</div>. Commercial use includes but is not limited to sale of the data, derivatives, replicas, images, or video, inclusion in a product for sale, or inclusion in advertisements (printed or electronic), on commercially-oriented web sites, or in trade shows.
                 </div>
                 
 
