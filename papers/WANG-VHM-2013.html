@@ -88,7 +88,7 @@
         <!-- Footer -->
 		<div id="footer">
             <ul style="list-style: none;"> 
-                <li>&copy; 2019 Dr. <a href="../index.html" style="color:#EB7500;text-decoration:none;">Yangang Wang</a>. All Rights Reserved. </li>
+                <li>&copy; 2013 - <span id="curdate"></span>. Dr. <a href="../index.html" style="color:#EB7500;text-decoration:none;">Yangang Wang</a>. All Rights Reserved. </li>
                 <li><div style="display: flex;justify-content: center;align-items: center;"><img src="../images/beian.png">&nbsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011502011122" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">苏公网安备 32011502011122号</a>&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://beian.miit.gov.cn/" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">京ICP备20006779号</a></div></li>
             </ul>
 		</div>
@@ -103,5 +103,6 @@
 		});
 	</script>
     <script>setTimeout(function(){document.getElementById('handcontrol').src = 'https://www.youtube.com/embed/oiU4JwUcQnU';},50)</script>
+    <script>(function() {var date = new Date();document.getElementById('curdate').textContent = date.getFullYear();})()</script>
 </body>
 </html>
