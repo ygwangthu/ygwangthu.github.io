@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<!-- saved from url=(0055)https://www.yangangwang.com/papers/ZZM-SCR-2022-03.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Skeleton Extraction for Articulated Objects with the Spherical Unwrapping Profiles</title>
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-	<link rel="icon" href="https://www.yangangwang.com/images/logo.ico">
+<html>
+<head>
+    <title>Skeleton Extraction for Articulated Objects with the Spherical Unwrapping Profiles</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <link rel="icon" href="../../images/logo.ico" />
     <link rel="stylesheet" href="../../assets/css/main.css" />
-    
+    <link href="../../assets/css/font-awesome.min.css" rel="stylesheet">
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.10/jquery.lazy.min.js"></script>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery.lazy.min.js"></script>
 </head>
 
 <body class="">
@@ -33,7 +32,7 @@
                 <hr style="height:1px;border:none;border-top:1px solid #dedddd;;margin-bottom:1em">
 
                 <!-- teaser -->
-                <div style="text-align:center;"><img class="lazy" width="100%" src="./pipeline.png" style=""></div>
+                <div style="text-align:center;"><img class="lazy" width="100%" data-src="./pipeline.png" loading="lazy"></div>
                 <div style="text-align:left;font-size:0.75em;line-height:1.4em"><div style="font-weight:bold;display:inline-block">Skeleton extraction process with SUPPLE representation.</div> (a) The overview of whole pileline. (b) CNN modules to extract branch joint heatmaps from unrestricted mesh; (c) CNN modules to forward alternately and recurrently to predict the single joint heatmap according to the proximal-to-distal order within each branch. </div>
 
                 <!-- abstract -->
@@ -43,14 +42,14 @@
                 
                 <div style="font-size:0.9em;font-weight:bold;padding-top:2em;">Surface Representation</div>
                 <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em">
-                <div style="text-align:center;"><img class="lazy" width="100%" src="./supplerep.jpg" style=""></div>
+                <div style="text-align:center;"><img class="lazy" width="100%" data-src="./supplerep.jpg" loading="lazy"></div>
                 <div style="text-align:left;font-size:0.75em;line-height:1.4em">
 				<b>SUPPLE definition.</b> Similar to the Cartesian, there exist three "orthogonal" projections in the spherical coordinate system, i.e., mapping all points with the same coordinate values of any two dimensions but different in the remaining one to the same position of the image plane. These projections exactly correspond to the three profiles of SUPPLE.
                 </div>
 				
 				<div style="font-size:0.9em;font-weight:bold;padding-top:2em;">Skeleton Branch Partitions</div>
                 <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em">
-                <div style="text-align:center;"><img class="lazy" width="100%" src="./branch.png" style=""></div>
+                <div style="text-align:center;"><img class="lazy" width="100%" data-src="./branch.png" loading="lazy"></div>
                 <div style="text-align:left;font-size:0.75em;line-height:1.4em">
 				<b>Branch partitions and heatmaps of different articulated categories.</b> Each articulated category skeleton is divided into several branches according to its kinematic characteristics and contains a similar number of joints. (a) Human body skeleton with 5 branches; (b) Human hand skeleton with 5 branches; (c) Quadruped skeleton with 6 branches; For each category, joints with the same color are from the same branch. To better observe the correspondence, each branch heatmap of each instance takes the corresponding \supple surface graph as the background.
                 </div>
@@ -58,7 +57,7 @@
                 <!-- results -->
                 <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Results</div>
                 <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em">
-                <div style="text-align:center"><img class="lazy" width="90%" src="./results.jpg"></div>
+                <div style="text-align:center"><img class="lazy" width="90%" data-src="./results.jpg" loading="lazy"></div>
                 <div style="font-size:0.75em;text-align:center;line-height:1.4em;">
                 <b>Qualitative skeleton extraction on different articulated categories.</b> Each mesh is viewed from two perspectives. Evaluated instances are collected from scans or online.
                 </div>
@@ -79,8 +78,8 @@
         <!-- Footer -->
 		<div id="footer">
             <ul style="list-style: none;"> 
-                <li>&copy; 2019 Dr. <a href="../index.html" style="color:#EB7500;text-decoration:none;">Yangang Wang</a>. All Rights Reserved. </li>
-                <li><div style="display: flex;justify-content: center;align-items: center;"><img src="../../images/beian.png">&nbsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011502011122" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">苏公网安备 32011502011122号</a>&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.beian.miit.gov.cn/" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">京ICP备20006779号</a></div></li>
+                <li>&copy; 2022 - <span id="curdate"></span>. Dr. <a href="../../index.html" style="color:#EB7500;text-decoration:none;">Yangang Wang</a>. All Rights Reserved. </li>
+                <li><div style="display: flex;justify-content: center;align-items: center;"><img src="../../assets/images/beian.png">&nbsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011502011122" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">苏公网安备 32011502011122号</a>&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://beian.miit.gov.cn/" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">京ICP备20006779号</a></div></li>
             </ul>
 		</div>
     </div>
@@ -93,6 +92,6 @@
             });
 		});
 	</script>
-    <!-- <script>setTimeout(function(){document.getElementById('outdoorvideo').src = 'https://www.youtube.com/embed/Fa_y9rxMPPg';},50)</script> -->
-
-</body></html>
+    <script>(function() {var date = new Date();document.getElementById('curdate').textContent = date.getFullYear();})()</script>
+</body>
+</html>

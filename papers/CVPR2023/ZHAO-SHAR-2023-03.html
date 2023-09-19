@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<!-- saved from url=(0055)https://www.yangangwang.com/papers/ZZM-SCR-2023-03.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head>
 	<title>Semi-supervised Hand Appearance Recovery via Structure Disentanglement and Dual Adversarial Discrimination</title>
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-	<link rel="stylesheet" href="../../assets/css/main.css" />
-    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <link rel="icon" href="../../images/logo.ico" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link href="../../assets/css/font-awesome.min.css" rel="stylesheet">
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.10/jquery.lazy.min.js"></script>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery.lazy.min.js"></script>
 </head>
 
 <body class="">
@@ -32,7 +32,7 @@
                 <hr style="height:1px;border:none;border-top:1px solid #dedddd;;margin-bottom:1em">
 
                 <!-- teaser -->
-                <div style="text-align:center;"><img class="lazy" width="100%" src="./pipeline.jpg" style=""></div>
+                <div style="text-align:center;"><img class="lazy" width="100%" data-src="./pipeline.jpg" loading="lazy"></div>
                 <div style="text-align:left;font-size:0.75em;line-height:1.4em"><div style="font-weight:bold;display:inline-block">Hand appearance recovery pipeline.</div> (a)~(c) Learning modules to disentangle bare hand structure map. Then a generative translator learns to wrap the structure map with the appearance in original image through DAD scheme. </div>
 
                 <!-- abstract -->
@@ -42,7 +42,7 @@
                 
                 <div style="font-size:0.9em;font-weight:bold;padding-top:2em;">Semi-supervised Paradigm</div>
                 <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em">
-                <div style="text-align:center;"><img class="lazy" width="100%" src="./system.jpg" style=""></div>
+                <div style="text-align:center;"><img class="lazy" width="100%" data-src="./system.jpg" loading="lazy"></div>
                 <div style="text-align:left;font-size:0.75em;line-height:1.4em">
                 <b>DAD scheme and Translator architecture.</b> (a) DAD introduces both result discriminator and process discriminator together to judge a multimodal translation process. (b) Our translator takes the estimated structure map and original image together as the inputs and separately extracts their multi-level features with a shared CNN backbone.
                 </div>
@@ -51,22 +51,22 @@
                 <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Results</div>
                 <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em">    
                 
-                <div style="text-align:center"><img class="lazy" width="90%" src="./totalres.jpg"></div>
+                <div style="text-align:center"><img class="lazy" width="90%" data-src="./totalres.jpg" loading="lazy"></div>
                 <div style="font-size:0.75em;text-align:center;line-height:1.4em;">
                     <b>Qualitative recovery results</b> from marker-contained data and object-occluded data.
                 </div>
                 
-                <div style="text-align:center"><img class="lazy" width="90%" src="./compareNormal.jpg"></div>
+                <div style="text-align:center"><img class="lazy" width="90%" data-src="./compareNormal.jpg" loading="lazy"></div>
                 <div style="font-size:0.75em;text-align:center;line-height:1.4em;">
                     <b>Comparisons on Structure disentanglements.</b> (Row-1) Input images. (Row-2) Mesh recovery by a template-based strategy. (Row-3) Structure prediction by a template-free strategy. (Row-4) Structure prediction by our sketcher w/o/ bare structure prior. (Row-5) Structure disentanglement by our full sketcher. Red circles indicate the artifacts in the results.
                 </div>
                 
-                <div style="text-align:center"><img class="lazy" width="90%" src="./compareCyclegan.jpg"></div>
+                <div style="text-align:center"><img class="lazy" width="90%" data-src="./compareCyclegan.jpg"></div>
                 <div style="font-size:0.75em;text-align:center;line-height:1.4em;">
                     <b>Comparisons on learning paradigms.</b> From left to right: The input, <a target="_blank" href="https://junyanz.github.io/CycleGAN/" style="font-weight:bold">CycleGAN</a>, <a target="_blank" href="https://taesung.me/ContrastiveUnpairedTranslation/" style="font-weight:bold">CUT</a>, <a target="_blank" href="https://phillipi.github.io/pix2pix/" style="font-weight:bold">Pix2pix</a>, and Ours. 
                 </div>
                 
-                <div style="text-align:center"><img class="lazy" width="90%" src="./compareNST.jpg"></div>
+                <div style="text-align:center"><img class="lazy" width="90%" data-src="./compareNST.jpg"></div>
                 <div style="font-size:0.75em;text-align:center;line-height:1.4em;">
                     <b>Comparisons to the SOTA NSTs.</b> From left to right: The input, <a target="_blank" href="https://github.com/facebookresearch/pytorch3d" style="font-weight:bold">Diff-Render</a>, <a target="_blank" href="https://github.com/clovaai/WCT2" style="font-weight:bold">WCT2</a>, <a target="_blank" href="https://github.com/nkolkin13/STROTSS" style="font-weight:bold">STROTSS</a>, and Ours.
                 </div>
@@ -86,8 +86,8 @@
 		<!-- Footer -->
 		<div id="footer">
             <ul style="list-style: none;"> 
-                <li>&copy; 2023 - <span id="curdate"></span>. Dr. <a href="../index.html" style="color:#EB7500;text-decoration:none;">Yangang Wang</a>. All Rights Reserved. </li>
-                <li><div style="display: flex;justify-content: center;align-items: center;"><img src="../../images/beian.png">&nbsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011502011122" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">苏公网安备 32011502011122号</a>&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.beian.miit.gov.cn/" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">京ICP备20006779号</a></div></li>
+                <li>&copy; 2023 - <span id="curdate"></span>. Dr. <a href="../../index.html" style="color:#EB7500;text-decoration:none;">Yangang Wang</a>. All Rights Reserved. </li>
+                <li><div style="display: flex;justify-content: center;align-items: center;"><img src="../../assets/images/beian.png">&nbsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011502011122" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">苏公网安备 32011502011122号</a>&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://beian.miit.gov.cn/" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">京ICP备20006779号</a></div></li>
             </ul>
 		</div>
     </div>
@@ -101,5 +101,5 @@
 		});
 	</script>
     <script>(function() {var date = new Date();document.getElementById('curdate').textContent = date.getFullYear();})()</script>
-
-</body></html>
+</body>
+</html>
