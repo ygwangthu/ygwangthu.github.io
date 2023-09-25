@@ -1,0 +1,94 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Reconstructing Groups of People with Hypergraph Relational Reasoning</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="icon" href="../../assets/images/logo.ico" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link href="../../assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery.lazy.min.js"></script>
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main" class="panel" style="margin-top:2em;line-height:1.3em">
+            <article id="news" class="panel">
+                <!-- head -->
+                <div style="font-size:0.75em;text-align:center;padding-top:0.5em">International Conference on Computational Visual Media (CVM), 2023</div>
+                <div style="font-size:1.0em;font-weight:bold;padding:1em 0.5em;text-align:center">HMDO : Markerless Multi-view Hand Manipulation Capture with Deformable Objects</div>
+                <div style="font-size:0.75em;padding-bottom:1em;text-align:center">
+                    <div style="display:inline-block;">Wei Xie, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;">Zhipeng Yu, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;">Zimeng Zhao, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;">Binghui Zuo, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;"><a target="_blank" href="http://yangangwang.com/" style="color:#EB7500">Yangang Wang</a></div>&nbsp;&nbsp;        
+                </div>
+                <div style="font-size:0.75em;padding-bottom:1em;text-align:center">
+                    <div style="display:inline-block;"><a target="_blank" href="http://www.seu.edu.cn/english/main.htm" style="font-weight:bold">Southeast University</a></div>&nbsp;&nbsp;
+                </div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;;margin-bottom:1em"/>
+            
+                <!-- teaser -->
+                <div style="text-align:center;"><img class="lazy" width="100%" data-src="XIE-HMDO-2023-pipeline.jpg" loading="lazy"></div>
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em"><div style="font-weight:bold;display:inline-block">Hand and deformable object reconstruction pipeline.</div> (a) Image features are first extracted from the current frame T, including the 2D poses of the hands and the masks of the object; (b) Hands motion tracking is performed based on image features and historical information; (c) The object global pose is estimated based on the current frame object masks and tracked hands, and the object mesh of the previous frame T-1; (d) The deformed object is obtained under the guidance of hand and object collaboration. </div>
+
+                <!-- abstract -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em;">Abstract</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em">We construct the first markerless deformable interaction dataset recording interactive motions of the hands and deformable objects, called HMDO (Hand Manipulation with Deformable Objects). With our built multi-view capture system, it captures the deformable interactions with multiple perspectives, various object shapes, and diverse interactive forms. Our motivation is the current lack of hand and deformable object interaction datasets, as 3D hand and deformable object reconstruction is challenging. Mainly due to mutual occlusion, the interaction area is difficult to observe, the visual features between the hand and the object are entangled, and the reconstruction of the interaction area deformation is difficult. To tackle this challenge, we propose a method to annotate our captured data. Our key idea is to collaborate with estimated hand features to guide the object global pose estimation, and then optimize the deformation process of the object by analyzing the relationship between the hand and the object. Through comprehensive evaluation, the proposed method can reconstruct interactive motions of hands and deformable objects with high quality. HMDO currently consists of 21600 frames over 12 sequences. In the future, this dataset could boost the research of learning-based reconstruction of deformable interaction scenes. </div>
+
+                <!-- dataset -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em" id="dataset">Dataset</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="text-align:center"><img class="lazy" width="100%" src="XIE-HMDO-2023-teaser.jpg" loading="lazy">
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em;">
+                    Our HMDO dataset is the markerless deformable interaction dataset, which records the interactive motions of the hands and 12 deformable objects from 10 perspectives. Its main focus is the non-rigid contact deformation of interacting objects. The HMDO dataset consists of 21600 frames.
+                    <p>
+                        <span style="font-size:0.9em;"><a target="_blank" href="https://pan.baidu.com/s/1Px-pf2gdTPLjRI0NEGv4TQ?pwd=uinc">HMDO Dataset <i class="fa fa-arrow-right"></i></a></span>
+                    </p>
+                </div>
+
+                <div style="font-weight:bold;font-size:0.75em;text-align:left;line-height:1.4em;padding-top: 1em;">
+                    The rights to copy, distribute, and use the HMDO dataset (henceforth called "HMDO") you are being given access to are under the control of Yangang Wang, director of the Vision and Cognition Lab, Southeast University. You are hereby given permission to copy this data in electronic or hardcopy form for your own scientific use and to distribute it for scientific use to colleagues within your research group. Inclusion of images or video made from this data in a scholarly publication (printed or electronic) is also permitted. In this case, credit must be given to the publication: *HMDO : Markerless Multi-view Hand Manipulation Capture with Deformable Objects*. For any other use, including distribution outside your research group, written permission is required from Yangang Wang. <div style="color:red;display:inline-block">Any commercial use is not allowed</div>. Commercial use includes but is not limited to sale of the data, derivatives, replicas, images, or video, inclusion in a product for sale, or inclusion in advertisements (printed or electronic), on commercially-oriented web sites, or in trade shows.
+
+                </div>
+
+                <!-- Reference -->
+                <div style="font-size:0.9em;font-weight:bold;text-align:left;padding-top:1em">Reference</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="background-color:#ddd;margin-bottom:1em">
+                    <div style="text-align:left;font-size:0.75em;line-height:1.4em;padding:1em 1em">Wei Xie, Zhipeng Yu, Zimeng Zhao, Binghui Zuo and Yangang Wang. "<strong>HMDO : Markerless Multi-view Hand Manipulation Capture with Deformable Objects</strong>". <i>International Conference on Computational Visual Media (CVM), 2023.</i></div>
+                </div>
+
+                <!-- acknowledgements -->
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em"><strong>Acknowledgments:</strong> This work was supported in part by the National Natural Science Foundation of China (No. 62076061) and the Natural Science Foundation of Jiangsu Province (No. BK20220127).</div>
+            </article>
+        </div>
+
+        
+
+        <!-- Footer -->
+		<div id="footer">
+            <ul style="list-style: none;"> 
+                <li>&copy; 2023 - <span id="curdate"></span>. Dr. <a href="../../index.html" style="color:#EB7500;text-decoration:none;">Yangang Wang</a>. All Rights Reserved. </li>
+                <li><div style="display: flex;justify-content: center;align-items: center;"><img src="../../assets/images/beian.png">&nbsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011502011122" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">苏公网安备 32011502011122号</a>&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://beian.miit.gov.cn/" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">京ICP备20006779号</a></div></li>
+            </ul>
+		</div>
+    </div>
+
+    <script src="../../assets/js/main.js"></script>
+    <script>
+		$(function() {
+			$('.lazy').Lazy({
+                effect : "fadeIn"
+            });
+		});
+	</script>
+    <script>(function() {var date = new Date();document.getElementById('curdate').textContent = date.getFullYear();})()</script>
+</body>
+</html>
