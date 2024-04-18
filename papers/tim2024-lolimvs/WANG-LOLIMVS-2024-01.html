@@ -17,7 +17,7 @@
         pre code {
             line-height: 1.5em;
             font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-            font-size: 0.8em;
+            font-size: 0.85em;
             background-color: #f7f7f9;
             border: 1px solid #ddd;
             padding: 0.5em;
@@ -67,17 +67,22 @@
                     The rights to copy, distribute, and use the dataset are being given access to are under the control of Yangang Wang, director of the Vision and Cognition Lab, Southeast University. In this case, credit must be given to: *LoliMVS: An End-to-End Network for Multiview Stereo With Low-Light Images*. <div style="font-weight:bold;display:inline-block">Any commercial use is not allowed</div>.
                     <div style="text-align:center"><img class="lazy" width="100%" src="WANG-LOLIMVS-2024-01-dataset.jpg" loading="lazy"></div>
 
-                    As for the RAW data, you can use the following C++ code (with OpenCV) to read the <div style="font-weight:bold;display:inline-block">Bayer</div> image (low-light)
-                    <pre><code>cv::Mat image(cv::Size(1280, 1024), CV_8UC1);
+                    <p><span style="font-weight:bold;color:#FF1A1A;">Notes for the Raw data</span></p>
+                    <ol>
+                        <li style="margin-bottom: 1.1em;"><div style="font-weight:bold;display:inline-block">About the name</div>. The naming convention employs a 7-digit combination, the first and third digits are reserved. The second digit can be 0, 1, or 2. If it's 0, the image belongs to a single-view image category; if it's 1 or 2, it belongs to a multi-view image category. The combination of the fourth and fifth digits represents the scene object name of the image, while the sixth and seventh digits represent the viewpoint of that scene. For instance, "0102349.RAW" signifies that this multi-view image is the 23rd scene object from the 49th viewpoint.</li>
+
+                        <li><div style="font-weight:bold;display:inline-block">About the reading</div>. You can use the following C++ code (with OpenCV) to read the <div style="font-weight:bold;display:inline-block">Bayer</div> image (low-light)
+                            <pre><code>cv::Mat image(cv::Size(1280, 1024), CV_8UC1);
 FILE* file = nullptr;
 fopen_s(&file, "xxxx.raw", "rb");
 fread_s(image.data, image.cols * image.rows, sizeof(uchar), image.cols * image.rows, file);</code></pre>
-                    or
-                    you can use the following C++ code (with OpenCV) to read the <div style="font-weight:bold;display:inline-block">color</div> image (normal lighting)
-                    <pre><code>cv::Mat image(cv::Size(1280, 1024), CV_8UC3);
+                            or
+                            you can use the following C++ code (with OpenCV) to read the <div style="font-weight:bold;display:inline-block">color</div> image (normal lighting)
+                            <pre><code>cv::Mat image(cv::Size(1280, 1024), CV_8UC3);
 FILE* file = nullptr;
 fopen_s(&file, "xxxx.raw", "rb");
-fread_s(image.data, image.cols * image.rows * 3, sizeof(uchar) * 3, image.cols * image.rows, file);</code></pre>
+fread_s(image.data, image.cols * image.rows * 3, sizeof(uchar) * 3, image.cols * image.rows, file);</code></pre></li>
+                    </ol>
                 </div>
 
                 <!-- results -->
