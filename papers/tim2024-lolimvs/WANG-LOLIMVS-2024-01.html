@@ -1,0 +1,120 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<title>LoliMVS: An End-to-End Network for Multiview Stereo With Low-Light Images</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="icon" href="../../assets/images/logo.ico" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link href="../../assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery.lazy.min.js"></script>
+
+    <style>
+        pre code {
+            line-height: 1.5em;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            font-size: 0.8em;
+            background-color: #f7f7f9;
+            border: 1px solid #ddd;
+            padding: 0.5em;
+            display: block;
+            overflow-x: auto;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    </style>    
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main" class="panel" style="margin-top:2em;line-height:1.3em">
+            <article id="news" class="panel">
+                <!-- head -->
+                <div style="font-size:0.75em;text-align:center;padding-top:0.5em">IEEE Transactions on Instrumentation and Measurement (TIM)</div>
+                <div style="font-size:1.0em;font-weight:bold;padding:1em 0.5em;text-align:center">LoliMVS: An End-to-End Network for Multiview Stereo With Low-Light Images</div>
+                <div style="font-size:0.75em;padding-bottom:1em;text-align:center">
+                    <div style="display:inline-block;"><a target="_blank" href="http://yangangwang.com/" style="color:#EB7500">Yangang Wang<sup>1</sup></a>, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;">Qingfang Jiang<sup>1,2</sup></div>          
+                </div>
+                <div style="font-size:0.75em;padding-bottom:1em;text-align:center">
+                    <div style="display:inline-block;"><sup>1</sup><a target="_blank" href="http://www.seu.edu.cn/english/main.htm" style="font-weight:bold">Southeast University</a></div>&nbsp;&nbsp;
+                    <div style="display:inline-block;"><sup>2</sup><a target="_blank" href="http://www.nuaa.edu.cn/" style="font-weight:bold">Nanjing University of Aeronautics and Astronautics</a></div>
+                </div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;;margin-bottom:1em"/>
+
+                <!-- teaser -->
+                <div style="text-align:center;"><img class="lazy" width="100%" data-src="WANG-LOLIMVS-2024-01-teaser.jpg" loading="lazy"></div>
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em"><div style="font-weight:bold;display:inline-block">Overview of LoliMVS.</div>  In the training stage, the processing is divided into two steps. In step 1, an encoder-decoder network is trained with RAW low-light images and ground-truth images. We then fix the feature extraction encoder in step 1 and train the coarse-to-fine decoder for inferring the depth maps in step 2. In the inference stage, we adopt the encoder and decoder for MVS to reconstruct the point cloud model. </div>
+
+                <!-- abstract -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em;">Abstract</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em">Performing multi-view stereo (MVS) reconstruction under low-light environment is challenging. Different from traditional MVS methods that work with images captured under normal lighting conditions, we focus on reconstructing 3D models in low-light situations. To address this, we propose a learning-based MVS framework consisting of two steps: low-light image enhancement and MVS reconstruction. At first, we adopt an encoder-decoder network to enhance the low-light images, making them more visually discernible. Then, the encoder is fixed and shared, facilitating to train a decoder for MVS reconstruction. To validate our approach, we have created a new dataset called <div style="font-weight:bold;display:inline-block">LoLi100</div>, specifically designed for low-light reconstruction. In our experiments, we train and test our method on this dataset, demonstrating that our pipeline generates 3D models with fine details and clear texture. Compared to other methods, our approach significantly improves completeness and overall quality of the depth maps. The dataset is publicly available at the <a target="_blank" href="WANG-LOLIMVS-2024-01.html">webpage</a></div>
+
+                <!-- dataset -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">LoLi100 Dataset</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em;">
+                    The <div style="font-weight:bold;display:inline-block">LoLi100</div> dataset consists of two main parts: the RAW low-light data and normal lighting data, which serves to be utilized for training the low-light image enhancement submodule and the MVS reconstruction submodule. The first part of the dataset contains 3231 pairs of low-light and normal-light images, representing the RAW sensor data. The second part consists of 74 objects, each captured from about 30 viewpoints. For each object, we provide cleaned images under both low-light and normal-light conditions, along with camera parameters and rendered depth maps.
+                    <p>
+                        <span style="font-size:0.9em;"><a target="_blank" href="https://pan.baidu.com/s/1jg3CBiIZIbXwYjCCD3FY_g?pwd=9frl">Dataset <i class="fa fa-arrow-right"></i></a></span>
+                    </p>
+
+                    The rights to copy, distribute, and use the dataset are being given access to are under the control of Yangang Wang, director of the Vision and Cognition Lab, Southeast University. In this case, credit must be given to: *LoliMVS: An End-to-End Network for Multiview Stereo With Low-Light Images*. <div style="font-weight:bold;display:inline-block">Any commercial use is not allowed</div>.
+                    <div style="text-align:center"><img class="lazy" width="100%" src="WANG-LOLIMVS-2024-01-dataset.jpg" loading="lazy"></div>
+
+                    As for the RAW data, you can use the following C++ code (with OpenCV) to read the <div style="font-weight:bold;display:inline-block">Bayer</div> image (low-light)
+                    <pre><code>cv::Mat image(cv::Size(1280, 1024), CV_8UC1);
+FILE* file = nullptr;
+fopen_s(&file, "xxxx.raw", "rb");
+fread_s(image.data, image.cols * image.rows, sizeof(uchar), image.cols * image.rows, file);</code></pre>
+                    or
+                    you can use the following C++ code (with OpenCV) to read the <div style="font-weight:bold;display:inline-block">color</div> image (normal lighting)
+                    <pre><code>cv::Mat image(cv::Size(1280, 1024), CV_8UC3);
+FILE* file = nullptr;
+fopen_s(&file, "xxxx.raw", "rb");
+fread_s(image.data, image.cols * image.rows * 3, sizeof(uchar) * 3, image.cols * image.rows, file);</code></pre>
+                </div>
+
+                <!-- results -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Results</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="text-align:center"><img class="lazy" width="100%" src="WANG-LOLIMVS-2024-01-result.jpg" loading="lazy"></div>
+
+                <!-- Reference -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:1em">Reference</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="background-color:#ddd;margin-bottom:1em">
+                    <div style="text-align:left;font-size:0.75em;line-height:1.4em;padding:1em 1em">Yangang Wang, Qingfang Jiang. "<strong>LoliMVS: An End-to-End Network for Multiview Stereo With Low-Light Images</strong>". <i>IEEE Transactions on Instrumentation and Measurement</i>, 73:5008111, 2024.</div>
+                </div>
+
+                <!-- acknowledgements -->
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em"><strong>Acknowledgments:</strong> This work was supported by the National Natural Science Foundation of China (No. 62122038 and 62076061), Natural Science Foundation of Jiangsu Province (No. BK20220127 and BK20211565).</div>
+            </article>
+        </div>
+
+        <!-- Footer -->
+		<div id="footer">
+            <ul style="list-style: none;"> 
+                <li>&copy; 2024 - <span id="curdate"></span>. Dr. <a href="../../index.html" style="color:#EB7500;text-decoration:none;">Yangang Wang</a>. All Rights Reserved. </li>
+                <li><div style="display: flex;justify-content: center;align-items: center;"><img src="../../assets/images/beian.png">&nbsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011502011122" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">苏公网安备 32011502011122号</a>&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://beian.miit.gov.cn/" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">京ICP备20006779号</a></div></li>
+            </ul>
+		</div>
+    </div>
+
+    <script src="../../assets/js/main.js"></script>
+    <script>
+		$(function() {
+			$('.lazy').Lazy({
+                effect : "fadeIn"
+            });
+		});
+	</script>
+    <script>setTimeout(function(){document.getElementById('video').src = 'https://www.youtube.com/embed/YdsajJ8sxqg';},50)</script>
+    <script>(function() {var date = new Date();document.getElementById('curdate').textContent = date.getFullYear();})()</script>
+</body>
+</html>
