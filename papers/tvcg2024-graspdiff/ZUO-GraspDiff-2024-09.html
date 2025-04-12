@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>GraspDiff: Grasping Generation for Hand-Object Interaction with Multimodal Guided Diffusion</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="icon" href="../../assets/images/logo.ico" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link href="../../assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery.lazy.min.js"></script>
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main" class="panel" style="margin-top:2em;line-height:1.3em">
+            <article id="news" class="panel">
+                <!-- head -->
+                <div style="font-size:0.75em;text-align:center;padding-top:0.5em">IEEE Transactions on Visualization and Computer Graphics (TVCG), 2024</div>
+                <div style="font-size:1.0em;font-weight:bold;padding:1em 0.5em;text-align:center">GraspDiff: Grasping Generation for Hand-Object Interaction with Multimodal Guided Diffusion</div>
+                <div style="font-size:0.75em;padding-bottom:1em;text-align:center">
+                    <div style="display:inline-block;"><a target="_blank" href="https://binghui-z.github.io/">Binghui Zuo</a>, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;">Zimeng Zhao </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;">Wenqian Sun, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;">Xiaohan Yuan, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;">Zhipeng Yu, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;"><a target="_blank" href="http://yangangwang.com/">Yangang Wang</a></div>&nbsp;&nbsp;              
+                </div>
+                <div style="font-size:0.75em;padding-bottom:1em;text-align:center">
+                    <div style="display:inline-block;"><a target="_blank" href="http://www.seu.edu.cn/english/main.htm" style="font-weight:bold">Southeast University</a></div>&nbsp;&nbsp;
+                </div>
+
+                <!-- teaser -->
+                <div style="text-align:center;"><img class="lazy" width="100%" data-src="ZBH-GraspDiff-2024-09-pipeline.jpg" loading="lazy"></div>
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em"><div style="font-weight:bold;display:inline-block"> Overview of our GraspDiff framework.</div>  We first embed the training data into the latent space with a VAE module and employ the diffusion model to generate hand grasps. Multimodal conditions are considered for varying granularity and are optionally supplemented onto the point clouds. With a frozen VAE decoder, the desired grasps are obtained. A refinement module is also integrated to further improve the plausibility of grasps.</div>
+
+                <!-- abstract -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em;">Abstract</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em">Grasping generation holds significant importance in both robotics and AI-generated content. While pure network paradigms based on VAEs or GANs ensure diversity in outcomes, they often fall short of achieving plausibility. Additionally, although those two-step paradigms that first predict contact and then optimize distance yield plausible results, they are always known to be time-consuming. This paper introduces a novel paradigm powered by DDPM, accommodating diverse modalities with varying interaction granularities as its generating conditions, including 3D object, contact affordance, and image content. Our key idea is that the iterative steps inherent to diffusion models can supplant the iterative optimization routines in existing optimization methods, thereby endowing the generated results from our method with both diversity and plausibility. Using the same training data, our paradigm achieves superior generation performance and competitive generation speed compared to optimization-based paradigms. Extensive experiments on both in-domain and out-of-domain objects demonstrate that our method receives significant improvement over the SOTA method. We will release the code for research purposes.</div>
+
+                <!-- results -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Results</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="text-align:center"><img class="lazy" width="100%" src="ZBH-GraspDiff-2024-09-result.jpg" loading="lazy"></div>
+                <div style="font-size:0.75em;text-align:center;line-height:1.4em;">
+                    We demonstrate 8 sampled grasps of each object. The upper side shows the performance on in-domain objects and the bottom side shows the performance on out-of-domain objects.
+                </div>
+
+                <!-- application -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Application</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="text-align:center"><img class="lazy" width="100%" src="ZBH-GraspDiff-2024-09-application.jpg" loading="lazy">
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em"> (a) As the object scale changes, our method can still generate reasonable grasping poses, which exhibits the robust generation capability for objects with different scales. (b) We generate two-hand interactions on InterHand2.6M and display two views for each interaction.
+                </div>
+
+                <!-- materials -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Materials</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <table>
+                    <tr>
+                        <td style="width:25%;padding:0em 0.5em;border-right:1px solid #dedddd">
+                            <a target="_blank" href="https://ieeexplore.ieee.org/document/10689328" title="paper"><div class="image_carousel"><img class="lazy" width="100%" data-src="ZBH-GraspDiff-2024-09-paper.jpg" loading="lazy"></div></a>
+                            <hr style="height:1px;border:none;border-top:1px solid #dedddd;" />
+                            <div style="font-size:0.7em;text-align:left;line-height:1.4em">Related links</div>
+                            <ul style="font-size:0.6em;text-align:left;line-height:1.4em;margin-top:0em;">
+                                <li><a target="_blank" href="https://ieeexplore.ieee.org/document/10689328">Download Paper</a></li>
+                                <li><a target="_blank" href="ZBH-GraspDiff-2024-09-paper-supp.pdf">Download Supplementary Material</a></li>
+                                <li><a target="_blank" href="ZBH-GraspDiff-2024-09.bib">Download Bibtex</a></li>
+                            </ul>
+                        </td>
+                        <td style="width:75%;padding:0em 0.3em">
+                            <div class="video-container">
+                                <iframe id="graspdiff" src="" width="1280" height="720" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Reference -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:1em">Reference</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="background-color:#ddd;margin-bottom:1em">
+                    <div style="text-align:left;font-size:0.75em;line-height:1.4em;padding:1em 1em">Binghui Zuo, Zimeng Zhao, Wenqian Sun, Xiaohan Yuan, Zhipeng Yu, and Yangang Wang. "<strong>GraspDiff: Grasping Generation for Hand-Object Interaction With Multimodal Guided Diffusion</strong>". <i>IEEE Transactions on Visualization and Computer Graphics (TVCG), 2024.</i></div>
+                </div>
+
+                <!-- acknowledgements -->
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em"><strong>Acknowledgments:</strong> This work was supported in part by the National Natural Science Foundation of China (No. 62076061), the Natural Science Foundation of Jiangsu Province (No. BK20220127).</div>
+            </article>
+        </div>
+
+        <!-- Footer -->
+		<div id="footer">
+            <ul style="list-style: none;"> 
+                <li>&copy; 2023 - <span id="curdate"></span>. Dr. <a href="../../index.html" style="color:#EB7500;text-decoration:none;">Yangang Wang</a>. All Rights Reserved. </li>
+                <li><div style="display: flex;justify-content: center;align-items: center;"><img src="../../assets/images/beian.png">&nbsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011502011122" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">苏公网安备 32011502011122号</a>&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://beian.miit.gov.cn/" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">京ICP备20006779号</a></div></li>
+            </ul>
+		</div>
+    </div>
+
+    <script src="../../assets/js/main.js"></script>
+    <script>
+		$(function() {
+			$('.lazy').Lazy({
+                effect : "fadeIn"
+            });
+		});
+	</script>
+    <script>setTimeout(function(){document.getElementById('graspdiff').src = 'https://player.bilibili.com/player.html?bvid=BV1GQAieRE77&page=1';},50)</script>
+    <script>(function() {var date = new Date();document.getElementById('curdate').textContent = date.getFullYear();})()</script>
+</body>
+</html>
