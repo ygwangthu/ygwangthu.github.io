@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>NP-Hand: Novel Perspective Hand Image Synthesis Guided by Normals</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="icon" href="../../assets/images/logo.ico" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link href="../../assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery.lazy.min.js"></script>
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main" class="panel" style="margin-top:2em;line-height:1.3em">
+            <article id="news" class="panel">
+                <!-- head -->
+                <div style="font-size:0.75em;text-align:center;padding-top:0.5em">IEEE Transactions on Image Processing (TIP), 2025</div>
+                <div style="font-size:1.0em;font-weight:bold;padding:1em 0.5em;text-align:center">NP-Hand: Novel Perspective Hand Image Synthesis Guided by Normals</div>
+                <div style="font-size:0.75em;padding-bottom:1em;text-align:center">
+                    <div style="display:inline-block;"><a target="_blank" href="https://binghui-z.github.io/">Binghui Zuo</a>, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;">Wenqian Sun, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;">Zimeng Zhao </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;">Xiaohan Yuan, </div>&nbsp;&nbsp;
+                    <div style="display:inline-block;"><a target="_blank" href="http://yangangwang.com/">Yangang Wang</a></div>&nbsp;&nbsp;              
+                </div>
+                <div style="font-size:0.75em;padding-bottom:1em;text-align:center">
+                    <div style="display:inline-block;"><a target="_blank" href="http://www.seu.edu.cn/english/main.htm" style="font-weight:bold">Southeast University</a></div>&nbsp;&nbsp;
+                </div>
+
+                <!-- teaser -->
+                <div style="text-align:center;"><img class="lazy" width="100%" data-src="ZBH-NPHand-2025-04-pipeline.jpg" loading="lazy"></div>
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em"><div style="font-weight:bold;display:inline-block"> Training process of the proposed NP-Hand.</div> The whole framework consists of three key components for synthesizing photorealistic hand images. (a) Given a paired training data, we first estimate the normal map using the designed hand normal estimator (HNE) from the target low-resolution image. We view the estimated normal maps as one of the conditions that drive the consistency of hand structure. (b) Then, we introduce a DDPM-based module to iteratively synthesize low-resolution hand images and also treat the extracted features from the source image as extra conditions to maintain a consistent appearance. (c) By connecting a conditional GAN-based module, we further improve the quality of synthesized low-resolution images and receive a convincing improvement of resolution from 64 to 256, 512, 1024.</div>
+                
+                <!-- abstract -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em;">Abstract</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em">Synthesizing multi-view images that are geometrically consistent with a given single-view image is one of the hot issues in AIGC in recent years. Existing methods have achieved impressive performance on objects with symmetry or rigidity, but they are inappropriate for the human hand. Because an image-captured human hand has more diverse poses and less attractive textures. In this paper, we propose NP-Hand, a framework that elegantly combines the diffusion model and generative adversarial network: The multi-step diffusion is trained to synthesize low-resolution novel perspective, while the single-step generator is exploited to further enhance synthesis quality. To maintain the consistency between inputs and synthesis, we creatively introduce normal maps into NP-Hand to guide the whole synthesizing process. Comprehensive evaluations have demonstrated that the proposed framework is superior to existing state-of-the-art models and more suitable for synthesizing hand images with faithful structures and realistic appearance details.</div>
+
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em;">Inference</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <!-- teaser -->
+                <div style="text-align:center;"><img class="lazy" width="100%" data-src="ZBH-NPHand-2025-04-pipeline-test.jpg" loading="lazy"></div>
+                <div style="text-align:left;font-size:0.75em;line-height:1.4em"><div style="font-weight:bold;display:inline-block"> Testing process of the proposed NP-Hand on unseen images.</div> Given a monocular image, unlike estimating the normal map from the target image, we reconstruct the corresponding hand mesh and sample camera positions to render novel-view normal maps, which are used as sampling conditions. Other modules maintain consistent manners with the training process.</div>
+
+
+                <!-- results -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Results</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="text-align:center"><img class="lazy" width="100%" src="ZBH-NPhand-2025-04-result.jpg" loading="lazy"></div>
+                <div style="font-size:0.75em;text-align:center;line-height:1.4em;">
+                    Comparisons on Interhand2.6M and Hand4K++ (with same guidance). From left-to-right: the source image, target normal, the results are of PATN, DPTN, GFLA, CocosNetV2, NTED, PIDM, CFLD and ours respectively, ground truth.
+                </div>
+
+                <!-- 3DGS -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Performance in 3DGS</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="text-align:center"><img class="lazy" width="100%" src="ZBH-NPhand-2025-04-3DGS.jpg" loading="lazy"></div>
+                <div style="font-size:0.75em;text-align:center;line-height:1.4em;">
+                    With normal maps as guidance, the constructed 3DGS could render hand images with more intricate local details and fewer artifacts.
+                </div>
+                
+                <!-- Super-Resolution -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Performance in Super-Resolution</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="text-align:center"><img class="lazy" width="100%" src="ZBH-NPhand-2025-04-SR.jpg" loading="lazy"></div>
+                <div style="font-size:0.75em;text-align:center;line-height:1.4em;">
+                    Super-resolution hand image synthesis on Hand4K++. We depict the visualized results with the resolutions of 1024 x 1024, 512 x 512 and 256 x 256 respectively.
+                </div>
+
+                <!-- materials -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:2em">Materials</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <table>
+                    <tr>
+                        <td style="width:25%;padding:0em 0.5em;border-right:1px solid #dedddd">
+                            <a target="_blank" href="https://ieeexplore.ieee.org/document/10969541" title="paper"><div class="image_carousel"><img class="lazy" width="100%" data-src="ZBH-NPHand-2025-04-paper.jpg" loading="lazy"></div></a>
+                            <hr style="height:1px;border:none;border-top:1px solid #dedddd;" />
+                            <div style="font-size:0.7em;text-align:left;line-height:1.4em">Related links</div>
+                            <ul style="font-size:0.6em;text-align:left;line-height:1.4em;margin-top:0em;">
+                                <li><a target="_blank" href="https://ieeexplore.ieee.org/document/10969541">Download Paper</a></li>
+                                <li><a target="_blank" href="ZBH-NPHand-2025-04-supp.pdf">Download Supplementary Material</a></li>
+                                <li><a target="_blank" href="ZBH-NPHand-2025-04.bib">Download Bibtex</a></li>
+                            </ul>
+                        </td>
+                        <td style="width:75%;padding:0em 0.3em">
+                            <div class="video-container">
+                                <iframe id="nphand" src="" width="1280" height="720" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Reference -->
+                <div style="font-size:0.9em;font-weight:bold;padding-top:1em">Reference</div>
+                <hr style="height:1px;border:none;border-top:1px solid #dedddd;margin-bottom:1em"/>
+                <div style="background-color:#ddd;margin-bottom:1em">
+                    <div style="text-align:left;font-size:0.75em;line-height:1.4em;padding:1em 1em">Binghui Zuo, Wenqian Sun, Zimeng Zhao, Xiaohan Yuan, and Yangang Wang. "<strong>NP-Hand: Novel Perspective Hand Image Synthesis Guided by Normals</strong>". <i>IEEE Transactions on Image Processing (TIP), 2025.</i></div>
+                </div>
+
+                <!-- acknowledgements -->
+                <div style="font-size:0.75em;text-align:left;line-height:1.4em"><strong>Acknowledgments:</strong> This work was supported in part by the National Natural Science Foundation of China (No. 62076061), the Natural Science Foundation of Jiangsu Province (No. BK20220127).</div>
+            </article>
+        </div>
+
+        <!-- Footer -->
+		<div id="footer">
+            <ul style="list-style: none;"> 
+                <li>&copy; 2023 - <span id="curdate"></span>. Dr. <a href="../../index.html" style="color:#EB7500;text-decoration:none;">Yangang Wang</a>. All Rights Reserved. </li>
+                <li><div style="display: flex;justify-content: center;align-items: center;"><img src="../../assets/images/beian.png">&nbsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011502011122" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">苏公网安备 32011502011122号</a>&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://beian.miit.gov.cn/" style="color:rgba(255, 255, 255, 0.45);text-decoration:none;">京ICP备20006779号</a></div></li>
+            </ul>
+		</div>
+    </div>
+
+    <script src="../../assets/js/main.js"></script>
+    <script>
+		$(function() {
+			$('.lazy').Lazy({
+                effect : "fadeIn"
+            });
+		});
+	</script>
+    <script>setTimeout(function(){document.getElementById('nphand').src = 'https://player.bilibili.com/player.html?bvid=BV1CejdzsEQn&page=1';},50)</script>
+    <script>(function() {var date = new Date();document.getElementById('curdate').textContent = date.getFullYear();})()</script>
+</body>
+</html>
