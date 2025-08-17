@@ -1,153 +1,103 @@
 (function($) {
 
-	var $window = $(window),
-		$body = $('body'),
-		$wrapper = $('#wrapper'),
-		$main = $('#main'),
-		$panels = $main.children('.panel'),
-		$nav = $('#nav'), $nav_links = $nav.children('a');
+    var $window = $(window),
+        $body = $('body'),
+        $wrapper = $('#wrapper'),
+        $main = $('#main'),
+        $nav = $('#nav'), $nav_links = $nav.children('a');
 
-	// Play initial animations on page load.
-	$window.on('load', function() {
-		window.setTimeout(function() {
-			$body.removeClass('is-preload');
-		}, 100);
-	});
+    // 初始动画
+    $window.on('load', function() {
+        window.setTimeout(function() {
+            $body.removeClass('is-preload');
+        }, 100);
+    });
 
-	// Nav.
-	$nav_links
-		.on('click', function(event) {
+    // -------------------------------
+    // 显示面板函数
+    // -------------------------------
+    function showPanel(panelId) {
+        var $panel = $main.children(panelId);
 
-			var href = $(this).attr('href');
+        if ($panel.length > 0) {
+            // 面板已在 DOM 中，直接切换
+            $main.children('.panel').addClass('inactive').hide();
+            $nav_links.removeClass('active');
+            $panel.show().removeClass('inactive');
+            $nav_links.filter('[href="' + panelId + '"]').addClass('active');
 
-			// Not a panel link? Bail.
-				if (href.charAt(0) != '#'
-				||	$panels.filter(href).length == 0)
-					return;
+            $main.css({
+                'max-height': $panel.outerHeight() + 'px',
+                'min-height': $panel.outerHeight() + 'px'
+            });
 
-			// Prevent default.
-				event.preventDefault();
-				event.stopPropagation();
+            setTimeout(function() {
+                $main.css({ 'max-height': '', 'min-height': '' });
+                $window.triggerHandler('--refresh');
+            }, 250);
 
-			// Change panels.
-				if (window.location.hash != href)
-					window.location.hash = href;
+        } else {
+            // 面板不在 DOM 中，尝试动态加载
+            loadModule(panelId.slice(1), panelId);
+        }
+    }
 
-		});
+    // -------------------------------
+    // 动态加载模块函数
+    // -------------------------------
+    function loadModule(moduleId, panelId) {
+    fetch(`modules/${moduleId}.html`)
+        .then(res => {
+            if (!res.ok) throw new Error('Module not found');
+            return res.text();
+        })
+        .then(html => {
+            // 移除原有 panel
+            $main.children('.panel').addClass('inactive').hide();
 
-// Panels.
+            // 直接插入 HTML 内容，不再包一层新的 panel
+            $main.append(html);
 
-	// Initialize.
-		(function() {
+            // 调用 showPanel 切换
+            showPanel(panelId);
 
-			var $panel, $link;
+            // 初始化懒加载
+            if ($.fn.Lazy) $('.lazy').Lazy({ effect: "fadeIn" });
+        })
+        .catch(err => {
+            console.warn(err.message);
+        });
+	}
 
-			// Get panel, link.
-				if (window.location.hash) {
+    // -------------------------------
+    // 导航点击事件
+    // -------------------------------
+    $nav_links.on('click', function(event) {
+        event.preventDefault();
+        var href = $(this).attr('href');
 
-					$panel = $panels.filter(window.location.hash);
-					$link = $nav_links.filter('[href="' + window.location.hash + '"]');
+        if (window.location.hash !== href) {
+            window.location.hash = href; // 保持导航高亮
+        } else {
+            showPanel(href);
+        }
 
-				}
+        // 阻止页面滚动
+        setTimeout(function() { window.scrollTo(0, 0); }, 1);
+    });
 
-			// No panel/link? Default to first.
-				if (!$panel
-				||	$panel.length == 0) {
+    // -------------------------------
+    // 页面首次加载或 hashchange
+    // -------------------------------
+    function initPage() {
+        var initialHash = window.location.hash || '#me';
+        showPanel(initialHash);
 
-					$panel = $panels.first();
-					$link = $nav_links.first();
+        // 阻止浏览器滚动
+        setTimeout(function() { window.scrollTo(0, 0); }, 1);
+    }
 
-				}
-
-			// Deactivate all panels except this one.
-				$panels.not($panel)
-					.addClass('inactive')
-					.hide();
-
-			// Activate link.
-				$link
-					.addClass('active');
-
-			// Reset scroll.
-				$window.scrollTop(0);
-
-		})();
-
-		// Hashchange event.
-		$window.on('hashchange', function(event) {
-
-			var $panel, $link;
-
-			// Get panel, link.
-				if (window.location.hash) {
-
-					$panel = $panels.filter(window.location.hash);
-					$link = $nav_links.filter('[href="' + window.location.hash + '"]');
-
-					// No target panel? Bail.
-						if ($panel.length == 0)
-							return;
-
-				}
-
-			// No panel/link? Default to first.
-				else {
-					$panel = $panels.first();
-					$link = $nav_links.first();
-				}
-
-			// Deactivate all panels.
-				$panels.addClass('inactive');
-
-			// Deactivate all links.
-				$nav_links.removeClass('active');
-
-			// Activate target link.
-				$link.addClass('active');
-
-			// Set max/min height.
-				$main
-					.css('max-height', $main.height() + 'px')
-					.css('min-height', $main.height() + 'px');
-
-			// Delay.
-				setTimeout(function() {
-
-					// Hide all panels.
-						$panels.hide();
-
-					// Show target panel.
-						$panel.show();
-
-					// Set new max/min height.
-						$main
-							.css('max-height', $panel.outerHeight() + 'px')
-							.css('min-height', $panel.outerHeight() + 'px');
-
-					// Reset scroll.
-						$window.scrollTop(0);
-
-					// Delay.
-						window.setTimeout(function() {
-
-							// Activate target panel.
-								$panel.removeClass('inactive');
-
-							// Clear max/min height.
-								$main
-									.css('max-height', '')
-									.css('min-height', '');
-
-							// IE: Refresh.
-								$window.triggerHandler('--refresh');
-
-							// Unlock.
-								locked = false;
-
-						}, 500);
-
-				}, 250);
-
-		});
+    $window.on('hashchange', initPage);
+    $(document).ready(initPage);
 
 })(jQuery);
