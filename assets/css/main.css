@@ -264,7 +264,7 @@ body.is-preload #wrapper {
 }
 #main a{color:#488AC7;text-decoration:none}
 #main a:hover,a:focus{color:#165895;text-decoration:underline;}
-#main a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
+#main a:focus{outline:thin dotted;outline:none;outline-offset:-2px}
 
 #main > .panel {
 	-moz-transition: opacity 0.25s ease-in-out;
